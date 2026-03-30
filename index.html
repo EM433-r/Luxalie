@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Luxalie — Sérums Cils &amp; Ongles</title>
+  <meta name="description" content="Luxalie : sérums repousse cils et stylo croissance ongles. Formules naturelles, applicateurs précis, résultats visibles en 21 jours.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ============================================================
+     ANNOUNCEMENT TICKER #1
+     ============================================================ -->
+<div class="announcement-bar" aria-label="Annonces">
+  <div class="announcement-bar__track" aria-hidden="true">
+    <span class="announcement-bar__item">Livraison offerte</span>
+    <span class="announcement-bar__sep">|</span>
+    <span class="announcement-bar__item">Expédition sous 24–48h</span>
+    <span class="announcement-bar__sep">|</span>
+    <span class="announcement-bar__item">Garantie satisfait ou remboursé 30 jours</span>
+    <span class="announcement-bar__sep">|</span>
+    <span class="announcement-bar__item">Livraison offerte</span>
+    <span class="announcement-bar__sep">|</span>
+    <span class="announcement-bar__item">Expédition sous 24–48h</span>
+    <span class="announcement-bar__sep">|</span>
+    <span class="announcement-bar__item">Garantie satisfait ou remboursé 30 jours</span>
+    <span class="announcement-bar__sep">|</span>
+    <span class="announcement-bar__item">Livraison offerte</span>
+    <span class="announcement-bar__sep">|</span>
+    <span class="announcement-bar__item">Expédition sous 24–48h</span>
+    <span class="announcement-bar__sep">|</span>
+    <span class="announcement-bar__item">Garantie satisfait ou remboursé 30 jours</span>
+    <span class="announcement-bar__sep">|</span>
+    <span class="announcement-bar__item">Livraison offerte</span>
+    <span class="announcement-bar__sep">|</span>
+    <span class="announcement-bar__item">Expédition sous 24–48h</span>
+    <span class="announcement-bar__sep">|</span>
+    <span class="announcement-bar__item">Garantie satisfait ou remboursé 30 jours</span>
+    <span class="announcement-bar__sep">|</span>
+  </div>
+</div>
+
+<!-- ============================================================
+     HEADER
+     ============================================================ -->
+<header class="site-header" id="site-header">
+  <div class="header__inner">
+
+    <!-- LEFT: Hamburger + desktop nav -->
+    <div class="header__left">
+      <button class="hamburger-btn" id="hamburgerBtn" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mobileDrawer">
+        <svg class="icon-burger" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 16" aria-hidden="true">
+          <path d="M1 .5a.5.5 0 100 1h15.71a.5.5 0 000-1H1zM.5 8a.5.5 0 01.5-.5h15.71a.5.5 0 010 1H1A.5.5 0 01.5 8zm0 7a.5.5 0 01.5-.5h15.71a.5.5 0 010 1H1a.5.5 0 01-.5-.5z" fill="currentColor"/>
+        </svg>
+      </button>
+      <nav class="header__nav" aria-label="Navigation principale">
+        <a href="index.html" class="active">Accueil</a>
+        <a href="collections.html">Nos sérums</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+
+    <!-- CENTER: Logo -->
+    <div class="header__center">
+      <a href="index.html" class="header__logo">
+        <img src="https://luxalie.com/cdn/shop/files/Logo_fond_transparent.png?v=1769957353&width=600" alt="Luxalie" width="180" height="36">
+      </a>
+    </div>
+
+    <!-- RIGHT: Account + Cart -->
+    <div class="header__right">
+      <button class="header__icon header__lang-toggle" aria-label="Langue">
+        Français
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <a href="https://luxalie.com/customer_authentication/redirect?locale=fr&region_country=FR" class="header__icon" aria-label="Mon compte">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 19" aria-hidden="true">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M6 4.5a3 3 0 116 0 3 3 0 01-6 0zm3-4a4 4 0 100 8 4 4 0 000-8zm5.58 12.15c1.12.82 1.83 2.24 1.91 4.85H1.51c.08-2.6.79-4.03 1.9-4.85C4.66 11.75 6.5 11.5 9 11.5s4.35.26 5.58 1.15zM9 10.5c-2.5 0-4.65.24-6.17 1.35C1.27 12.98.5 14.93.5 18v.5h17V18c0-3.07-.77-5.02-2.33-6.15-1.52-1.1-3.67-1.35-6.17-1.35z" fill="currentColor"/>
+        </svg>
+      </a>
+      <a href="https://luxalie.com/cart" class="header__icon" aria-label="Panier">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18" aria-hidden="true">
+          <path d="M.9 1.8h2.1L5.1 12h9.3l2.1-7.5H4.8" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="7" cy="15.5" r="1.1" fill="currentColor"/>
+          <circle cx="13" cy="15.5" r="1.1" fill="currentColor"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+</header>
+
+<!-- Mobile Drawer Overlay -->
+<div class="mobile-drawer-overlay" id="drawerOverlay"></div>
+
+<!-- Mobile Drawer -->
+<div class="mobile-drawer" id="mobileDrawer" role="dialog" aria-modal="true" aria-label="Menu de navigation">
+  <div class="mobile-drawer__head">
+    <span class="mobile-drawer__head-title">Menu</span>
+    <button class="mobile-drawer__close-btn" id="drawerCloseBtn" aria-label="Fermer le menu">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+        <path d="M0 14.545L1.455 16 8 9.455 14.545 16 16 14.545 9.455 8 16 1.455 14.545 0 8 6.545 1.455 0 0 1.455 6.545 8z" fill-rule="evenodd"/>
+      </svg>
+    </button>
+  </div>
+  <nav aria-label="Menu mobile">
+    <a href="index.html"       class="drawer-nav-link active">Accueil</a>
+    <a href="collections.html" class="drawer-nav-link">Nos sérums</a>
+    <a href="contact.html"     class="drawer-nav-link">Contact</a>
+  </nav>
+  <div class="drawer-utilities">
+    <a href="https://luxalie.com/customer_authentication/redirect?locale=fr&region_country=FR" class="drawer-account-link">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 19" aria-hidden="true">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M6 4.5a3 3 0 116 0 3 3 0 01-6 0zm3-4a4 4 0 100 8 4 4 0 000-8zm5.58 12.15c1.12.82 1.83 2.24 1.91 4.85H1.51c.08-2.6.79-4.03 1.9-4.85C4.66 11.75 6.5 11.5 9 11.5s4.35.26 5.58 1.15zM9 10.5c-2.5 0-4.65.24-6.17 1.35C1.27 12.98.5 14.93.5 18v.5h17V18c0-3.07-.77-5.02-2.33-6.15-1.52-1.1-3.67-1.35-6.17-1.35z" fill="currentColor"/>
+      </svg>
+      Connexion
+    </a>
+    <div class="drawer-social">
+      <a href="https://www.facebook.com/share/17vPsAkU2X/" aria-label="Facebook" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+      </a>
+      <a href="https://www.instagram.com/luxalie_officiel?igsh=MWVpN2Fjem9ybWczZw==" aria-label="Instagram" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+      </a>
+      <a href="https://www.tiktok.com/@luxalieofficiel?_r=1&_t=ZN-92vonDZFhKw" aria-label="TikTok" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.32 6.32 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V9.01a8.16 8.16 0 0 0 4.77 1.52V7.09a4.85 4.85 0 0 1-1-.4z"/></svg>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================
+     HERO
+     ============================================================ -->
+<section class="hero">
+  <img class="hero__bg" src="https://luxalie.com/cdn/shop/files/Banniere_page_d_accueil_8c9a85f4-608d-46f8-9a85-4b40f39f02c3.jpg?v=1768402290" alt="Luxalie — Sérum repousse cils et stylo croissance ongles" loading="eager" fetchpriority="high">
+  <div class="hero__content">
+    <div class="hero__box scroll-reveal">
+      <h1 class="hero__title">Ta beauté existe déjà.<br>On l'aide juste à se montrer.</h1>
+      <p class="hero__benefit">Des cils plus fournis, des ongles plus forts. Sans artifice.</p>
+      <a href="collections.html" class="btn btn--secondary hero__cta">Découvrir nos sérums</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     TICKER #2 (dark)
+     ============================================================ -->
+<div class="ticker-dark" aria-hidden="true">
+  <div class="ticker-dark__track">
+    <span class="ticker-dark__item">Des cils et ongles naturellement plus forts</span>
+    <span class="ticker-dark__dot">•</span>
+    <span class="ticker-dark__item">Formules douces et naturelles</span>
+    <span class="ticker-dark__dot">•</span>
+    <span class="ticker-dark__item">Résultats visibles en 21 jours</span>
+    <span class="ticker-dark__dot">•</span>
+    <span class="ticker-dark__item">Des cils et ongles naturellement plus forts</span>
+    <span class="ticker-dark__dot">•</span>
+    <span class="ticker-dark__item">Formules douces et naturelles</span>
+    <span class="ticker-dark__dot">•</span>
+    <span class="ticker-dark__item">Résultats visibles en 21 jours</span>
+    <span class="ticker-dark__dot">•</span>
+    <span class="ticker-dark__item">Des cils et ongles naturellement plus forts</span>
+    <span class="ticker-dark__dot">•</span>
+    <span class="ticker-dark__item">Formules douces et naturelles</span>
+    <span class="ticker-dark__dot">•</span>
+  </div>
+</div>
+
+<!-- ============================================================
+     SECTION 2 — AVANT / APRÈS SLIDER
+     ============================================================ -->
+<section class="ba-section">
+  <div class="page-width ba-layout">
+
+    <!-- Comparaison avant/après statique — cils + ongles -->
+    <div class="ba-static-wrap scroll-reveal-left">
+
+      <!-- Rangée 1 : Cils (image combinée, labels déjà intégrés) -->
+      <div class="ba-cils-wrap">
+        <img src="https://luxalie.com/cdn/shop/files/Avant_apres_90d8271f-37af-441d-981b-f6754f11b0f7.jpg" alt="Cils avant/après — Sérum Repousse Cils Luxalie" loading="lazy">
+      </div>
+
+      <!-- Séparateur -->
+      <div class="ba-row-gap" aria-hidden="true"></div>
+
+      <!-- Rangée 2 : Ongles -->
+      <div class="ba-static" aria-label="Comparaison avant/après ongles Luxalie">
+        <div class="ba-panel">
+          <img src="https://luxalie.com/cdn/shop/files/Before.png?v=1768401662" alt="Ongles avant Luxalie" loading="lazy">
+          <span class="ba-tag" aria-hidden="true">AVANT</span>
+        </div>
+        <div class="ba-panel">
+          <img src="https://luxalie.com/cdn/shop/files/After.png?v=1768401681" alt="Ongles après 21 jours avec Luxalie" loading="lazy">
+          <span class="ba-tag" aria-hidden="true">APRÈS</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Contenu textuel -->
+    <div class="ba-content scroll-reveal-right">
+      <p class="ba-content__tag">Résultats visibles</p>
+      <h2 class="ba-content__title">Tu méritais ça depuis longtemps.</h2>
+      <p class="ba-content__body">Fini les ongles qui cassent et les cils qui se raréfient.<br><br>Avec Luxalie, tu retrouves une beauté naturelle et soignée — celle que le stress, les extensions et les produits agressifs avaient peu à peu effacée.<br><br>Nos formules ultra-douces travaillent en profondeur, à la racine. Sans prostaglandines. Sans alcool. Sans compromis.</p>
+      <a href="collections.html" class="btn btn--primary">Voir les résultats</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============================================================
+     SECTION 3 — TIMELINE BÉNÉFICES
+     ============================================================ -->
+<section class="benefits-timeline">
+  <div class="page-width">
+    <p class="benefits-timeline__tag scroll-reveal">Pourquoi Luxalie</p>
+    <h2 class="benefits-timeline__title scroll-reveal">Le rituel soir qui révèle ta beauté naturelle.</h2>
+
+    <div class="timeline">
+      <div class="timeline__connector" aria-hidden="true"></div>
+
+      <div class="timeline__node scroll-reveal">
+        <div class="timeline__icon">
+          <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M16 4C10 4 6 9 6 14c0 6 6 12 10 14 4-2 10-8 10-14 0-5-4-10-10-10z"/>
+            <path d="M16 10v6l4 3"/>
+          </svg>
+        </div>
+        <div class="timeline__text">
+          <h3>Des résultats en 21 jours, pas 6 mois</h3>
+          <p>Des actifs testés cliniquement pour stimuler la repousse et fortifier tes cils depuis la racine — visiblement, dès les premières semaines.</p>
+        </div>
+      </div>
+
+      <div class="timeline__node scroll-reveal">
+        <div class="timeline__icon">
+          <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M10 6h12v6l2 3-2 3v8H10v-8l-2-3 2-3V6z"/>
+            <path d="M13 12h6M13 16h6M13 20h4"/>
+          </svg>
+        </div>
+        <div class="timeline__text">
+          <h3>Formulé par des experts</h3>
+          <p>Développé avec des dermatologues. Testé ophtalmologiquement. Compatible lentilles de contact.</p>
+        </div>
+      </div>
+
+      <div class="timeline__node scroll-reveal">
+        <div class="timeline__icon">
+          <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M16 4 C 8 4 6 10 6 14 C 6 20 16 28 16 28 C 16 28 26 20 26 14 C 26 10 24 4 16 4 Z"/>
+            <path d="M11 15l3.5 3.5 6-7"/>
+          </svg>
+        </div>
+        <div class="timeline__text">
+          <h3>Sans compromis sur la douceur</h3>
+          <p>Zéro prostaglandine, zéro alcool, zéro parfum. Idéal pour les peaux sensibles et les yeux réactifs.</p>
+        </div>
+      </div>
+
+      <div class="timeline__node scroll-reveal">
+        <div class="timeline__icon">
+          <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M16 4 L16 18"/>
+            <path d="M11 9 L16 4 L21 9"/>
+            <ellipse cx="16" cy="22" rx="5" ry="3"/>
+            <path d="M11 22 C 11 26 21 26 21 22"/>
+          </svg>
+        </div>
+        <div class="timeline__text">
+          <h3>Applicateur ultra-précis</h3>
+          <p>Dépôt direct à la racine du cil pour une absorption maximale à chaque application du soir.</p>
+        </div>
+      </div>
+
+    </div><!-- /.timeline -->
+
+    <div class="timeline__cta scroll-reveal">
+      <a href="products/serum-pousse-cils-luxalie.html" class="btn btn--secondary">Découvrir le sérum cils</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SECTION 4 — DÉCOUVRIR NOS SÉRUMS
+     ============================================================ -->
+<section class="products-discover">
+  <div class="page-width">
+    <h2 class="products-discover__title scroll-reveal">Nos sérums</h2>
+    <p class="products-discover__sub scroll-reveal">Deux formules expertes. Un seul objectif : révéler ta beauté naturelle.</p>
+
+    <div class="pd-grid">
+
+      <article class="pd-card scroll-reveal">
+        <div class="pd-card__img-wrap">
+          <img src="https://luxalie.com/cdn/shop/files/generated-image-8-2.jpg?v=1769957538" alt="Sérum Repousse Cils Luxalie" loading="lazy">
+        </div>
+        <div class="pd-card__body">
+          <p class="pd-card__tag">Sérum Cils</p>
+          <h3 class="pd-card__name">Sérum Repousse Cils</h3>
+          <p class="pd-card__claim">Des cils plus longs et plus fournis — visiblement en 21 jours.</p>
+          <div class="pd-card__rating">
+            <span class="pd-card__stars">★★★★★</span>
+            <span class="pd-card__rating-count">4,81 · 31 avis</span>
+          </div>
+          <div class="pd-card__price">À partir de <strong>24,99 €</strong></div>
+          <a href="products/serum-pousse-cils-luxalie.html" class="btn btn--primary">Découvrir</a>
+        </div>
+      </article>
+
+      <article class="pd-card scroll-reveal">
+        <div class="pd-card__img-wrap">
+          <img src="https://luxalie.com/cdn/shop/files/generated-image-12-3.jpg?v=1766143802" alt="Stylo Croissance Ongles Luxalie" loading="lazy">
+        </div>
+        <div class="pd-card__body">
+          <p class="pd-card__tag">Stylo Ongles</p>
+          <h3 class="pd-card__name">Stylo Croissance Ongles</h3>
+          <p class="pd-card__claim">Des ongles plus longs et résistants — sans pose, sans gel agressif.</p>
+          <div class="pd-card__rating">
+            <span class="pd-card__stars">★★★★★</span>
+            <span class="pd-card__rating-count">4,88 · 16 avis</span>
+          </div>
+          <div class="pd-card__price">À partir de <strong>19,99 €</strong></div>
+          <a href="products/stylo-croissance-ongles.html" class="btn btn--outline">Découvrir</a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SECTION 5 — POURQUOI LUXALIE (tableau comparatif)
+     ============================================================ -->
+<section class="trust-table-section">
+  <div class="page-width">
+    <h2 class="trust-table-section__title scroll-reveal">Pourquoi choisir Luxalie ?</h2>
+    <p class="trust-table-section__sub scroll-reveal">Ce qui nous différencie — vraiment.</p>
+
+    <div class="trust-table scroll-reveal">
+      <table>
+        <thead>
+          <tr>
+            <th class="tt-criterion">Critère</th>
+            <th class="tt-luxalie">✦ Luxalie</th>
+            <th class="tt-others">Les autres</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Sans prostaglandines</td>
+            <td class="tt-check">✓</td>
+            <td class="tt-cross">✗</td>
+          </tr>
+          <tr>
+            <td>Sans alcool ni parfum</td>
+            <td class="tt-check">✓</td>
+            <td class="tt-cross">✗</td>
+          </tr>
+          <tr>
+            <td>Testé ophtalmologiquement</td>
+            <td class="tt-check">✓</td>
+            <td class="tt-neutral">Rarement</td>
+          </tr>
+          <tr>
+            <td>Compatible lentilles de contact</td>
+            <td class="tt-check">✓</td>
+            <td class="tt-cross">✗</td>
+          </tr>
+          <tr>
+            <td>Applicateur ultra-précis inclus</td>
+            <td class="tt-check">✓</td>
+            <td class="tt-cross">✗</td>
+          </tr>
+          <tr>
+            <td>Résultats visibles dès 21 jours</td>
+            <td class="tt-check">✓</td>
+            <td class="tt-neutral">≥ 60 jours</td>
+          </tr>
+          <tr>
+            <td>Garantie satisfait ou remboursé</td>
+            <td class="tt-check">✓</td>
+            <td class="tt-cross">✗</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SECTION 6 — SOCIAL PROOF AVEC PHOTOS
+     ============================================================ -->
+<section class="reviews-section-new">
+  <!-- En-tête redesigné -->
+  <div class="rsn-header scroll-reveal">
+    <div class="rsn-header__stars">★★★★★</div>
+    <h2 class="rsn-header__title">Elles ont testé.<br>Elles ne peuvent plus s'en passer.</h2>
+    <p class="rsn-header__sub">+&nbsp;1&nbsp;500 femmes nous font confiance &nbsp;·&nbsp; Note moyenne 4,84 / 5</p>
+  </div>
+
+  <!-- Grille 3 cartes avec photos -->
+  <div class="page-width">
+    <div class="rpc-grid">
+
+      <!-- Carte 1 — Amy D. (Stylo Ongles) avec photo réelle -->
+      <article class="rpc-card scroll-reveal">
+        <div class="rpc-card__img">
+          <img src="https://judgeme.imgix.net/luxalie/1765904251__0__aUp_Mehv__7_d2ceb0cd-bb6a-45a1-859a-e35d83a17401__original.png?auto=format&w=600" alt="Résultat ongles Amy D. — Luxalie" loading="lazy">
+        </div>
+        <div class="rpc-card__body">
+          <div class="rpc-card__stars">★★★★★</div>
+          <p class="rpc-card__text">"Après seulement trois semaines d'utilisation, mes ongles sont visiblement plus longs et beaucoup moins cassants. Un vrai plaisir de retrouver des mains soignées !"</p>
+          <div class="rpc-card__author">
+            <strong>Amy D.</strong>
+            <span>Achat vérifié &nbsp;·&nbsp; Stylo Croissance Ongles</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Carte 2 — Jade Petit (Sérum Cils) avec image avant/après -->
+      <article class="rpc-card scroll-reveal">
+        <div class="rpc-card__img">
+          <img src="https://luxalie.com/cdn/shop/files/Luxalie_avant_apres_page_produit.png?v=1767984692" alt="Résultat cils avant-après — Luxalie" loading="lazy">
+        </div>
+        <div class="rpc-card__body">
+          <div class="rpc-card__stars">★★★★★</div>
+          <p class="rpc-card__text">"C'est mon 2ème tube. Mes cils n'ont jamais été aussi longs — on me demande tout le temps si ce sont de faux cils au travail. Je recommande à 100%."</p>
+          <div class="rpc-card__author">
+            <strong>Jade P.</strong>
+            <span>Achat vérifié &nbsp;·&nbsp; Sérum Repousse Cils</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Carte 3 — Élodie M. (Sérum Cils) avec close-up œil -->
+      <article class="rpc-card scroll-reveal">
+        <div class="rpc-card__img">
+          <img src="https://luxalie.com/cdn/shop/files/gratefulphyllis960881_A_close-up_of_the_brown_eye_with_long_dar_29347243-cdd7-459a-aaba-9941ba5c9041.png?v=1764014446" alt="Résultat cils close-up — Luxalie" loading="lazy">
+        </div>
+        <div class="rpc-card__body">
+          <div class="rpc-card__stars">★★★★★</div>
+          <p class="rpc-card__text">"Après seulement 3 semaines, j'ai commencé à voir la différence. L'application est super facile avec le pinceau fin. Je suis vraiment bluffée par le résultat !"</p>
+          <div class="rpc-card__author">
+            <strong>Élodie M.</strong>
+            <span>41 ans, Lyon &nbsp;·&nbsp; Sérum Repousse Cils</span>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     COLLECTION GRID
+     ============================================================ -->
+<section class="collection-grid scroll-reveal">
+  <p class="collection-grid__header">Découvrir nos soins</p>
+  <div class="collection-grid__items">
+    <a href="products/serum-pousse-cils-luxalie.html" class="cg-item">
+      <img src="https://luxalie.com/cdn/shop/files/generated-image-8-2_3600x.jpg?v=1769957538" alt="Sérum repousse cils Luxalie" loading="lazy">
+      <div class="cg-item__overlay">
+        <p class="cg-item__name">Sérum Repousse Cils</p>
+        <span class="btn btn--secondary">Découvrir</span>
+      </div>
+    </a>
+    <a href="products/stylo-croissance-ongles.html" class="cg-item">
+      <img src="https://luxalie.com/cdn/shop/files/generated-image-12-2_3600x.jpg?v=1765911611" alt="Stylo croissance ongles Luxalie" loading="lazy">
+      <div class="cg-item__overlay">
+        <p class="cg-item__name">Stylo Croissance Ongles</p>
+        <span class="btn btn--secondary">Découvrir</span>
+      </div>
+    </a>
+  </div>
+</section>
+
+<!-- ============================================================
+     TRUST BADGES
+     ============================================================ -->
+<section class="trust-section" aria-label="Nos engagements">
+  <div class="trust-grid">
+    <div class="trust-item scroll-reveal">
+      <svg class="trust-item__icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+        <path d="M44 24l-4-4V12h-8l-4-4H20l-4 4H8v8l-4 4 4 4v8h8l4 4h8l4-4h8v-8l4-4z"/>
+        <path d="M24 16v8l4 4"/>
+      </svg>
+      <p class="trust-item__title">Livraison Offerte</p>
+      <p class="trust-item__text">Partout dans le monde, sans frais supplémentaires.</p>
+    </div>
+    <div class="trust-item scroll-reveal">
+      <svg class="trust-item__icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+        <path d="M24 4L6 12v12c0 10.4 7.6 20.1 18 22.5C34.4 44.1 42 34.4 42 24V12L24 4z"/>
+        <polyline points="16 24 21 29 32 18"/>
+      </svg>
+      <p class="trust-item__title">Satisfait ou remboursé</p>
+      <p class="trust-item__text">Retour sous 30 jours, sans condition.</p>
+    </div>
+    <div class="trust-item scroll-reveal">
+      <svg class="trust-item__icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+        <path d="M21 15a7 7 0 0 1 14 0c0 5.25-7 13-7 13S21 20.25 21 15z"/>
+        <circle cx="28" cy="15" r="2"/>
+        <path d="M6 34l4-4 4 4 4-4 4 4"/>
+      </svg>
+      <p class="trust-item__title">Réponse en 24h</p>
+      <p class="trust-item__text">Une vraie personne te répond — pas un bot, pas une FAQ froide.</p>
+    </div>
+    <div class="trust-item scroll-reveal">
+      <svg class="trust-item__icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+        <rect x="6" y="16" width="36" height="24" rx="3"/>
+        <path d="M16 16v-4a8 8 0 0 1 16 0v4"/>
+        <circle cx="24" cy="28" r="3"/>
+      </svg>
+      <p class="trust-item__title">Paiement sécurisé</p>
+      <p class="trust-item__text">Cryptage SSL — vos données sont protégées.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
+<footer class="site-footer">
+  <div class="footer__inner">
+
+    <!-- Col 1: Brand -->
+    <div>
+      <div class="footer__logo">
+        <img src="https://luxalie.com/cdn/shop/files/luxalie-white.png?v=1764014379" alt="Luxalie" width="120" height="34">
+      </div>
+      <p class="footer__desc">LUXALIE aide les femmes à retrouver une beauté naturelle durable — des cils plus fournis, des ongles plus forts, sans artifice ni solutions coûteuses.</p>
+      <p class="footer__email">Une question ? <a href="mailto:contact@luxalie.com">contact@luxalie.com</a></p>
+      <div class="footer__social">
+        <a href="https://www.facebook.com/share/17vPsAkU2X/" aria-label="Facebook" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+        </a>
+        <a href="https://www.instagram.com/luxalie_officiel?igsh=MWVpN2Fjem9ybWczZw==" aria-label="Instagram" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+        </a>
+        <a href="https://www.tiktok.com/@luxalieofficiel?_r=1&_t=ZN-92vonDZFhKw" aria-label="TikTok" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.32 6.32 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V9.01a8.16 8.16 0 0 0 4.77 1.52V7.09a4.85 4.85 0 0 1-1-.4z" fill="white"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- Col 2: Aide -->
+    <div>
+      <p class="footer__col-title">Aide</p>
+      <ul class="footer__links">
+        <li><a href="contact.html">Contactez-nous</a></li>
+        <li><a href="https://luxalie.com/pages/questions-frequentes" target="_blank" rel="noopener">Questions Fréquentes</a></li>
+        <li><a href="https://luxalie.com/pages/notre-exigence-qualite" target="_blank" rel="noopener">Notre Exigence Qualité</a></li>
+        <li><a href="https://luxalie.com/policies/refund-policy" target="_blank" rel="noopener">Politique de remboursement</a></li>
+      </ul>
+    </div>
+
+    <!-- Col 3: Légal -->
+    <div>
+      <p class="footer__col-title">Légal</p>
+      <ul class="footer__links">
+        <li><a href="https://luxalie.com/pages/mentions-legales" target="_blank" rel="noopener">Mentions Légales</a></li>
+        <li><a href="https://luxalie.com/pages/politique-de-confidentialite" target="_blank" rel="noopener">Politique de Confidentialité</a></li>
+        <li><a href="https://luxalie.com/pages/conditions-generales-de-vente-cgv" target="_blank" rel="noopener">Conditions Générales de Vente (CGV)</a></li>
+        <li><a href="https://luxalie.com/pages/conditions-generales-dutilisation-cgu" target="_blank" rel="noopener">Conditions Générales d'Utilisation (CGU)</a></li>
+        <li><a href="https://luxalie.com/pages/politiques-de-cookies" target="_blank" rel="noopener">Politique de Cookies</a></li>
+      </ul>
+    </div>
+
+    <!-- Col 4: Nos produits -->
+    <div>
+      <p class="footer__col-title">Nos produits</p>
+      <ul class="footer__links">
+        <li><a href="products/serum-pousse-cils-luxalie.html">Sérum Repousse Cils</a></li>
+        <li><a href="products/stylo-croissance-ongles.html">Stylo Croissance Ongles</a></li>
+        <li><a href="collections.html">Toute la collection</a></li>
+      </ul>
+    </div>
+
+  </div>
+  <div class="footer__bottom">
+    <p>© 2026, Luxalie — Tous droits réservés</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

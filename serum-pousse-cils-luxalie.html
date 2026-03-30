@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sérum Repousse Cils — Luxalie</title>
+  <meta name="description" content="Sérum Repousse Cils Luxalie : des cils plus longs, plus fournis en 21 jours. Formule naturelle, testé ophtalmologiquement, sans prostaglandines.">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<!-- ANNOUNCEMENT BAR -->
+<div class="announcement-bar" aria-label="Annonces">
+  <div class="announcement-bar__track" aria-hidden="true">
+    <span class="announcement-bar__item">Livraison offerte</span>
+    <span class="announcement-bar__sep">|</span>
+    <span class="announcement-bar__item">Expédition sous 24–48h</span>
+    <span class="announcement-bar__sep">|</span>
+    <span class="announcement-bar__item">Garantie satisfait ou remboursé 30 jours</span>
+    <span class="announcement-bar__sep">|</span>
+    <span class="announcement-bar__item">Livraison offerte</span>
+    <span class="announcement-bar__sep">|</span>
+    <span class="announcement-bar__item">Expédition sous 24–48h</span>
+    <span class="announcement-bar__sep">|</span>
+    <span class="announcement-bar__item">Garantie satisfait ou remboursé 30 jours</span>
+    <span class="announcement-bar__sep">|</span>
+    <span class="announcement-bar__item">Livraison offerte</span>
+    <span class="announcement-bar__sep">|</span>
+    <span class="announcement-bar__item">Expédition sous 24–48h</span>
+    <span class="announcement-bar__sep">|</span>
+    <span class="announcement-bar__item">Garantie satisfait ou remboursé 30 jours</span>
+    <span class="announcement-bar__sep">|</span>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header class="site-header" id="site-header">
+  <div class="header__inner">
+    <div class="header__left">
+      <button class="hamburger-btn" id="hamburgerBtn" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mobileDrawer">
+        <svg class="icon-burger" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 16" aria-hidden="true">
+          <path d="M1 .5a.5.5 0 100 1h15.71a.5.5 0 000-1H1zM.5 8a.5.5 0 01.5-.5h15.71a.5.5 0 010 1H1A.5.5 0 01.5 8zm0 7a.5.5 0 01.5-.5h15.71a.5.5 0 010 1H1a.5.5 0 01-.5-.5z" fill="currentColor"/>
+        </svg>
+      </button>
+      <nav class="header__nav" aria-label="Navigation principale">
+        <a href="../index.html">Accueil</a>
+        <a href="../collections.html">Nos sérums</a>
+        <a href="../contact.html">Contact</a>
+      </nav>
+    </div>
+    <div class="header__center">
+      <a href="../index.html" class="header__logo">
+        <img src="https://luxalie.com/cdn/shop/files/Logo_fond_transparent.png?v=1769957353&width=600" alt="Luxalie" width="180" height="36">
+      </a>
+    </div>
+    <div class="header__right">
+      <button class="header__icon header__lang-toggle" aria-label="Langue">
+        Français
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <a href="https://luxalie.com/customer_authentication/redirect?locale=fr&region_country=FR" class="header__icon" aria-label="Mon compte">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 19" aria-hidden="true">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M6 4.5a3 3 0 116 0 3 3 0 01-6 0zm3-4a4 4 0 100 8 4 4 0 000-8zm5.58 12.15c1.12.82 1.83 2.24 1.91 4.85H1.51c.08-2.6.79-4.03 1.9-4.85C4.66 11.75 6.5 11.5 9 11.5s4.35.26 5.58 1.15zM9 10.5c-2.5 0-4.65.24-6.17 1.35C1.27 12.98.5 14.93.5 18v.5h17V18c0-3.07-.77-5.02-2.33-6.15-1.52-1.1-3.67-1.35-6.17-1.35z" fill="currentColor"/>
+        </svg>
+      </a>
+      <a href="../cart.html" class="header__icon cart-icon" aria-label="Panier">
+        <span class="cart-count" style="display:none"></span>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18" aria-hidden="true">
+          <path d="M.9 1.8h2.1L5.1 12h9.3l2.1-7.5H4.8" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="7" cy="15.5" r="1.1" fill="currentColor"/>
+          <circle cx="13" cy="15.5" r="1.1" fill="currentColor"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+</header>
+
+<!-- Overlay + Drawer -->
+<div class="mobile-drawer-overlay" id="drawerOverlay"></div>
+<div class="mobile-drawer" id="mobileDrawer" role="dialog" aria-modal="true" aria-label="Menu">
+  <div class="mobile-drawer__head">
+    <span class="mobile-drawer__head-title">Menu</span>
+    <button class="mobile-drawer__close-btn" id="drawerCloseBtn" aria-label="Fermer">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+        <path d="M0 14.545L1.455 16 8 9.455 14.545 16 16 14.545 9.455 8 16 1.455 14.545 0 8 6.545 1.455 0 0 1.455 6.545 8z" fill-rule="evenodd"/>
+      </svg>
+    </button>
+  </div>
+  <nav>
+    <a href="../index.html"       class="drawer-nav-link">Accueil</a>
+    <a href="../collections.html" class="drawer-nav-link active">Nos sérums</a>
+    <a href="../contact.html"     class="drawer-nav-link">Contact</a>
+  </nav>
+  <div class="drawer-utilities">
+    <a href="https://luxalie.com/customer_authentication/redirect?locale=fr&region_country=FR" class="drawer-account-link">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 19" aria-hidden="true">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M6 4.5a3 3 0 116 0 3 3 0 01-6 0zm3-4a4 4 0 100 8 4 4 0 000-8zm5.58 12.15c1.12.82 1.83 2.24 1.91 4.85H1.51c.08-2.6.79-4.03 1.9-4.85C4.66 11.75 6.5 11.5 9 11.5s4.35.26 5.58 1.15zM9 10.5c-2.5 0-4.65.24-6.17 1.35C1.27 12.98.5 14.93.5 18v.5h17V18c0-3.07-.77-5.02-2.33-6.15-1.52-1.1-3.67-1.35-6.17-1.35z" fill="currentColor"/>
+      </svg>
+      Connexion
+    </a>
+    <div class="drawer-social">
+      <a href="https://www.facebook.com/share/17vPsAkU2X/" aria-label="Facebook" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+      </a>
+      <a href="https://www.instagram.com/luxalie_officiel?igsh=MWVpN2Fjem9ybWczZw==" aria-label="Instagram" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+      </a>
+      <a href="https://www.tiktok.com/@luxalieofficiel" aria-label="TikTok" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.32 6.32 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V9.01a8.16 8.16 0 0 0 4.77 1.52V7.09a4.85 4.85 0 0 1-1-.4z"/></svg>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- BREADCRUMB -->
+<nav class="breadcrumb" aria-label="Fil d'Ariane">
+  <a href="../index.html">Accueil</a>
+  <span class="breadcrumb__sep">/</span>
+  <a href="../collections.html">Nos sérums</a>
+  <span class="breadcrumb__sep">/</span>
+  <span>Sérum Repousse Cils</span>
+</nav>
+
+<!-- PRODUCT MAIN -->
+<section class="product-hero product-hero--cream">
+  <div class="product-layout">
+
+    <!-- Gallery -->
+    <div class="fp-gallery">
+      <div class="fp-gallery__thumbs" id="serumThumbs">
+        <div class="fp-gallery__thumb active" data-src="https://luxalie.com/cdn/shop/files/generated-image-4-2.jpg?v=1766110869">
+          <img src="https://luxalie.com/cdn/shop/files/generated-image-4-2.jpg?v=1766110869&width=150" alt="Sérum individuel">
+        </div>
+        <div class="fp-gallery__thumb" data-src="https://luxalie.com/cdn/shop/files/Avant_apres_90d8271f-37af-441d-981b-f6754f11b0f7.jpg?v=1769957538">
+          <img src="https://luxalie.com/cdn/shop/files/Avant_apres_90d8271f-37af-441d-981b-f6754f11b0f7.jpg?v=1769957538&width=150" alt="Avant-après cils">
+        </div>
+        <div class="fp-gallery__thumb" data-src="https://luxalie.com/cdn/shop/files/generated-image-7-2.jpg?v=1769957538">
+          <img src="https://luxalie.com/cdn/shop/files/generated-image-7-2.jpg?v=1769957538&width=150" alt="Applicateur">
+        </div>
+        <div class="fp-gallery__thumb" data-src="https://luxalie.com/cdn/shop/files/pack-duo-performance-luxalie-avec-badge-promo-2_4da64a6d-712a-45d5-90e9-f2b64bd1516f.jpg?v=1769957538">
+          <img src="https://luxalie.com/cdn/shop/files/pack-duo-performance-luxalie-avec-badge-promo-2_4da64a6d-712a-45d5-90e9-f2b64bd1516f.jpg?v=1769957538&width=150" alt="Pack duo">
+        </div>
+        <div class="fp-gallery__thumb" data-src="https://luxalie.com/cdn/shop/files/cure_intense_final-2_9632d625-2bde-487c-93c9-3feb25653cca.jpg?v=1769957538">
+          <img src="https://luxalie.com/cdn/shop/files/cure_intense_final-2_9632d625-2bde-487c-93c9-3feb25653cca.jpg?v=1769957538&width=150" alt="Pack cure">
+        </div>
+        <div class="fp-gallery__thumb" data-src="https://luxalie.com/cdn/shop/files/generated-image-8-2.jpg?v=1769957538">
+          <img src="https://luxalie.com/cdn/shop/files/generated-image-8-2.jpg?v=1769957538&width=150" alt="Packaging">
+        </div>
+      </div>
+      <div class="fp-gallery__main">
+        <img id="serumMainImg" src="https://luxalie.com/cdn/shop/files/generated-image-4-2.jpg?v=1766110869" alt="Sérum Repousse Cils Luxalie" loading="eager" fetchpriority="high">
+      </div>
+    </div>
+
+    <!-- Info -->
+    <div class="fp-info">
+      <p class="fp-info__vendor">LUXALIE</p>
+      <h1 class="fp-info__title">Sérum Repousse Cils — Luxalie</h1>
+      <p class="fp-info__subtitle">Redécouvre la puissance de ton regard naturel</p>
+      <div class="fp-info__rating">
+        <span class="fp-info__stars">★★★★★</span>
+        <span class="fp-info__count">4,81 (31 avis)</span>
+      </div>
+      <ul class="fp-info__bullets">
+        <li>
+          <svg class="fp-bullet-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+          Des cils plus longs et plus fournis en <strong>21 jours</strong> sans artifice.
+        </li>
+        <li>
+          <svg class="fp-bullet-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+          Stimule la pousse et réduit la chute pour des cils visiblement renforcés.
+        </li>
+        <li>
+          <svg class="fp-bullet-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+          Ingrédients naturels, applicateur précis, efficacité maximale.
+        </li>
+        <li>
+          <svg class="fp-bullet-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+          Sans parfum, sans alcool, sans prostaglandine. Testé ophtalmologiquement.
+        </li>
+      </ul>
+
+      <blockquote class="fp-info__quote">
+        "Bonsoir, je n'avais plus de cils à cause des faux cils que j'ai mis. J'étais très septique mais après avoir utilisé le sérum je suis très très satisfaite merci"
+        <cite>— Norha H. · Achat vérifié</cite>
+      </blockquote>
+
+      <p class="fp-info__variant-label">Choisissez ta cure Luxalie</p>
+      <p class="fp-info__variant-sub">Quantités limitées, profitez-en vite</p>
+
+      <div class="variant-cards" id="serumVariants">
+        <div class="variant-card active" data-price="24,99 €">
+          <span class="variant-card__qty">x1</span>
+          <div class="variant-card__info">
+            <div class="variant-card__name">Individuel : 1 sérum</div>
+            <div class="variant-card__sub">Résultat progressif</div>
+          </div>
+          <div class="variant-card__pricing">
+            <span class="variant-card__current">24,99 €</span>
+          </div>
+        </div>
+        <div class="variant-card" data-price="37,99 €">
+          <span class="variant-card__qty">x2</span>
+          <div class="variant-card__info">
+            <div class="variant-card__name">Duo : 2 sérums</div>
+            <div class="variant-card__sub">Économisez 12€ — Résultat visible</div>
+          </div>
+          <div class="variant-card__pricing">
+            <span class="variant-card__current">37,99 €</span>
+            <span class="variant-card__old">49,98 €</span>
+            <span class="variant-card__per">19,00 € /sérum</span>
+          </div>
+        </div>
+        <div class="variant-card" data-price="49,99 €">
+          <span class="variant-card__badge">⭐ Recommandée</span>
+          <span class="variant-card__qty">x3</span>
+          <div class="variant-card__info">
+            <div class="variant-card__name">Cure : 3 sérums</div>
+            <div class="variant-card__sub">Économisez 25€ — Résultat optimal</div>
+            <div class="variant-card__note">★★★★★ Déjà adopté par +250 clientes</div>
+          </div>
+          <div class="variant-card__pricing">
+            <span class="variant-card__current">49,99 €</span>
+            <span class="variant-card__old">74,97 €</span>
+            <span class="variant-card__per">16,66 € /sérum</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="fp-info__cta">
+        <button class="btn-add-to-cart">Commander maintenant</button>
+        <button class="btn-more-payment">Plus de moyens de paiement</button>
+        <p class="fp-info__urgency">13 personnes consultent cette cure en ce moment</p>
+      </div>
+
+      <!-- UPSELL inline -->
+      <div class="fp-upsell">
+        <p class="fp-upsell__label">Fréquemment acheté avec</p>
+        <div class="fp-upsell__card">
+          <div class="fp-upsell__img">
+            <img src="https://luxalie.com/cdn/shop/files/generated-image-12-3.jpg?v=1766143802" alt="Stylo Croissance Ongles" loading="lazy">
+          </div>
+          <div class="fp-upsell__info">
+            <p class="fp-upsell__name">Stylo Croissance Ongles</p>
+            <p class="fp-upsell__price">19,99 € <s>29,99 €</s></p>
+          </div>
+          <button class="fp-upsell__btn">Ajouter</button>
+        </div>
+      </div>
+
+      <div class="fp-info__mini-trust">
+        <span class="fp-mini-trust__item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          Livraison offerte
+        </span>
+        <span class="fp-mini-trust__item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          Garantie 30 jours
+        </span>
+        <span class="fp-mini-trust__item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          Expédition 24/48h
+        </span>
+      </div>
+
+      <!-- Accordion -->
+      <div class="product-accordion">
+        <details class="accordion-item">
+          <summary class="accordion-summary">Spécifications</summary>
+          <div class="accordion-content">
+            <p>Contenance : 5 ml par tube. Ingrédients actifs : Polygonum Multiflorum, Oligopeptide-3, Panthénol, Biotine. Sans alcool, sans parfum, sans prostaglandines. Testé ophtalmologiquement. Compatible lentilles de contact.</p>
+          </div>
+        </details>
+        <details class="accordion-item">
+          <summary class="accordion-summary">Conseils d'utilisation</summary>
+          <div class="accordion-content">
+            <p>Appliquez le sérum chaque soir sur la racine des cils à l'aide de l'applicateur pinceau. Laissez sécher avant d'appliquer tout autre produit. Évitez tout contact direct avec l'œil. Pour des résultats optimaux, utilisez pendant au moins 21 jours consécutifs.</p>
+          </div>
+        </details>
+        <details class="accordion-item">
+          <summary class="accordion-summary">En combien de temps voit-on les résultats?</summary>
+          <div class="accordion-content">
+            <p>Les premières améliorations sont visibles après 2 à 3 semaines d'utilisation régulière. Des résultats optimaux sont observés après 4 à 6 semaines.</p>
+          </div>
+        </details>
+        <details class="accordion-item">
+          <summary class="accordion-summary">Avez-vous une garantie de remboursement ?</summary>
+          <div class="accordion-content">
+            <p>Oui, nous offrons une garantie satisfait ou remboursé de 30 jours. Si tu n'es pas satisfaite, contacte notre service client à <a href="mailto:contact@luxalie.com">contact@luxalie.com</a>.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- TICKER après produit -->
+<div class="ticker-dark" aria-hidden="true">
+  <div class="ticker-dark__track">
+    <span class="ticker-dark__item">Des cils visiblement plus longs et plus fournis</span>
+    <span class="ticker-dark__dot">•</span>
+    <span class="ticker-dark__item">Formule sans prostaglandines</span>
+    <span class="ticker-dark__dot">•</span>
+    <span class="ticker-dark__item">Testé ophtalmologiquement</span>
+    <span class="ticker-dark__dot">•</span>
+    <span class="ticker-dark__item">Des cils visiblement plus longs et plus fournis</span>
+    <span class="ticker-dark__dot">•</span>
+    <span class="ticker-dark__item">Formule sans prostaglandines</span>
+    <span class="ticker-dark__dot">•</span>
+    <span class="ticker-dark__item">Testé ophtalmologiquement</span>
+    <span class="ticker-dark__dot">•</span>
+    <span class="ticker-dark__item">Des cils visiblement plus longs et plus fournis</span>
+    <span class="ticker-dark__dot">•</span>
+    <span class="ticker-dark__item">Formule sans prostaglandines</span>
+    <span class="ticker-dark__dot">•</span>
+  </div>
+</div>
+
+<!-- SECTION: Ton regard mérite mieux -->
+<section class="split split--white scroll-reveal">
+  <div class="split__media">
+    <img src="https://luxalie.com/cdn/shop/files/gempages_575382769450877778-2b5e4e3b-e822-4780-bc9e-78033044ca44_1921e033-604c-40fc-87af-ea9550a79f36.webp?v=1765748252" alt="Femme aux cils longs et naturels" loading="lazy">
+  </div>
+  <div class="split__content">
+    <h2 class="split__title">Ton regard mérite mieux que des cils cassants et invisibles</h2>
+    <p class="split__body">Chaque fois que tu appliques du mascara ou des extensions, tu caches la vérité : tes cils sont fatigués, fragiles, clairsemés… et rien ne semble les aider à pousser.<br><br>Mais ce n'est pas une fatalité :<br>Le maquillage masque… il n'améliore rien.<br>Les extensions affaiblissent tes vrais cils.<br>Et les solutions miracles ? Souvent trop agressives.<br><br>Le Sérum Repousse Cils Luxalie™ nourrit tes cils en profondeur, les fortifie dès la racine et révèle leur plein potentiel.</p>
+  </div>
+</section>
+
+<!-- SECTION: Appuyé par la recherche -->
+<section class="split split--reverse split--cream scroll-reveal">
+  <div class="split__media">
+    <img src="https://luxalie.com/cdn/shop/files/gratefulphyllis960881_A_close-up_of_the_brown_eye_with_long_dar_29347243-cdd7-459a-aaba-9941ba5c9041.png?v=1764014446" alt="Gros plan œil cils Luxalie" loading="lazy">
+  </div>
+  <div class="split__content">
+    <h2 class="split__title">Appuyé par la recherche et les professionnelles beauté</h2>
+    <p class="split__body">Contrairement aux extensions ou aux mascaras fortifiants qui masquent le problème sans jamais le résoudre, notre formule agit là où ça compte vraiment : à la racine du cil. Des actifs documentés scientifiquement, qui stimulent la pousse naturellement — sans agresser, sans dépendre.</p>
+    <blockquote style="border-left: 3px solid var(--star); padding-left: 16px; font-style: italic; font-size: 14px; color: var(--gray-text); margin: 0;">
+      "Ce sérum est un véritable atout pour toutes mes clientes qui veulent booster naturellement la beauté de leurs cils, sans produits agressifs."
+      <cite style="display: block; margin-top: 8px; font-style: normal; font-weight: 600; font-size: 12px;">— Noémie D, esthéticienne spécialisée</cite>
+    </blockquote>
+  </div>
+</section>
+
+<!-- RÉSULTATS — Stats visuelles TikTok -->
+<section class="results-stats-section scroll-reveal">
+  <div class="page-width">
+    <p class="results-stats__tag">Résultats prouvés</p>
+    <h2 class="results-stats__title">Ce qu'elles observent après leur cure</h2>
+    <div class="results-stats__card">
+      <img class="results-stats__eye-img" src="https://luxalie.com/cdn/shop/files/gratefulphyllis960881_A_close-up_of_the_brown_eye_with_long_dar_29347243-cdd7-459a-aaba-9941ba5c9041.png?v=1764014446" alt="" aria-hidden="true" loading="lazy">
+      <div class="results-stats__eye-overlay" aria-hidden="true"></div>
+      <img src="https://luxalie.com/cdn/shop/files/generated-image-4-2.jpg?v=1766110869" alt="Sérum Repousse Cils Luxalie" class="results-stats__product-img" loading="lazy">
+      <div class="results-stats__bubbles">
+        <div class="results-stats__bubble">
+          <div class="results-stats__pct">96%</div>
+          <p class="results-stats__label">Affirment avoir des cils plus longs</p>
+        </div>
+        <div class="results-stats__bubble">
+          <div class="results-stats__pct">94%</div>
+          <p class="results-stats__label">Affirment avoir des cils plus fournis</p>
+        </div>
+        <div class="results-stats__bubble">
+          <div class="results-stats__pct">92%</div>
+          <p class="results-stats__label">Affirment avoir un regard plus séduisant</p>
+        </div>
+      </div>
+    </div>
+    <p class="results-stats__note">*Résultats basés sur les retours de 128 utilisatrices après 21 jours d'utilisation quotidienne.</p>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="product-reviews-section scroll-reveal">
+  <div class="page-width">
+    <h2>Vos avis</h2>
+    <p class="prs-summary"><span>4,81 ★</span> (31 avis vérifiés)</p>
+    <div class="prs-grid">
+      <div class="prs-card">
+        <p class="prs-card__verified">✓ Achat vérifié</p>
+        <div class="prs-card__stars">★★★★★</div>
+        <p class="prs-card__text">"Un bon produit, j'ai vu la place mes cils plus beaux"</p>
+        <p class="prs-card__author">Anna Nurra</p>
+        <p class="prs-card__product">Sérum Repousse Cils</p>
+      </div>
+      <div class="prs-card">
+        <p class="prs-card__verified">✓ Achat vérifié</p>
+        <div class="prs-card__stars">★★★★★</div>
+        <p class="prs-card__text">"Super rapport qualité prix avec la promo. J'en ai donné un à ma sœur, on fait la cure ensemble depuis 10 jours. On voit déjà que les cils tombent moins au démaquillage."</p>
+        <p class="prs-card__author">Mélanie G.</p>
+        <p class="prs-card__product">Sérum Repousse Cils</p>
+      </div>
+      <div class="prs-card">
+        <p class="prs-card__verified">✓ Achat vérifié</p>
+        <div class="prs-card__stars">★★★★★</div>
+        <p class="prs-card__text">"C'est mon 2ème tube. Mes cils n'ont jamais été aussi longs, on me demande tout le temps si c'est des faux cils au travail lol. Je recommande à 100%."</p>
+        <p class="prs-card__author">Jade Petit</p>
+        <p class="prs-card__product">Sérum Repousse Cils</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq-section scroll-reveal">
+  <div class="page-width">
+    <h2>F.A.Q</h2>
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary>À partir de quand les résultats sont-ils visibles ?</summary>
+        <p class="faq-answer">Les premières améliorations sont généralement visibles après 2 à 3 semaines d'utilisation régulière. Les résultats optimaux sont observés après 4 à 6 semaines d'utilisation quotidienne.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Peut-on utiliser le sérum avec des extensions de cils ou du mascara ?</summary>
+        <p class="faq-answer">Oui, le sérum est compatible avec les extensions de cils et le mascara. Il est même conseillé de l'utiliser pour renforcer vos vrais cils si vous portez des extensions. Appliquez-le avant le mascara si possible.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Est-il adapté aux yeux sensibles ?</summary>
+        <p class="faq-answer">Oui, notre sérum est testé ophtalmologiquement et formulé sans alcool, sans parfum et sans prostaglandines. Il convient aux personnes aux yeux sensibles et est compatible avec les lentilles de contact.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Puis-je appliquer le sérum sur les cils inférieurs ?</summary>
+        <p class="faq-answer">Oui, le sérum peut être appliqué sur les cils supérieurs et inférieurs. Utilisez l'applicateur pinceau pour une application précise à la racine.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer__inner">
+    <div>
+      <div class="footer__logo">
+        <img src="https://luxalie.com/cdn/shop/files/luxalie-white.png?v=1764014379" alt="Luxalie" width="120" height="34">
+      </div>
+      <p class="footer__desc">LUXALIE est une marque dédiée à la beauté du regard et des mains. Des formules expertes, une application intuitive, des résultats visibles.</p>
+      <p class="footer__email">Une question ? <a href="mailto:contact@luxalie.com">contact@luxalie.com</a></p>
+      <div class="footer__social">
+        <a href="https://www.facebook.com/share/17vPsAkU2X/" aria-label="Facebook" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" fill="white"/></svg>
+        </a>
+        <a href="https://www.instagram.com/luxalie_officiel?igsh=MWVpN2Fjem9ybWczZw==" aria-label="Instagram" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+        </a>
+        <a href="https://www.tiktok.com/@luxalieofficiel" aria-label="TikTok" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.32 6.32 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V9.01a8.16 8.16 0 0 0 4.77 1.52V7.09a4.85 4.85 0 0 1-1-.4z" fill="white"/></svg>
+        </a>
+      </div>
+    </div>
+    <div>
+      <p class="footer__col-title">Aide</p>
+      <ul class="footer__links">
+        <li><a href="../contact.html">Contactez-nous</a></li>
+        <li><a href="https://luxalie.com/pages/questions-frequentes" target="_blank">Questions Fréquentes</a></li>
+        <li><a href="https://luxalie.com/pages/notre-exigence-qualite" target="_blank">Notre Exigence Qualité</a></li>
+        <li><a href="https://luxalie.com/policies/refund-policy" target="_blank">Politique de remboursement</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="footer__col-title">Légal</p>
+      <ul class="footer__links">
+        <li><a href="https://luxalie.com/pages/mentions-legales" target="_blank">Mentions Légales</a></li>
+        <li><a href="https://luxalie.com/pages/politique-de-confidentialite" target="_blank">Politique de Confidentialité</a></li>
+        <li><a href="https://luxalie.com/pages/conditions-generales-de-vente-cgv" target="_blank">CGV</a></li>
+        <li><a href="https://luxalie.com/pages/conditions-generales-dutilisation-cgu" target="_blank">CGU</a></li>
+        <li><a href="https://luxalie.com/pages/politiques-de-cookies" target="_blank">Politique de Cookies</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="footer__col-title">Nos produits</p>
+      <ul class="footer__links">
+        <li><a href="serum-pousse-cils-luxalie.html">Sérum Repousse Cils</a></li>
+        <li><a href="stylo-croissance-ongles.html">Stylo Croissance Ongles</a></li>
+        <li><a href="../collections.html">Toute la collection</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <p>© 2026, Luxalie — Tous droits réservés</p>
+  </div>
+</footer>
+
+<script src="../script.js"></script>
+</body>
+</html>

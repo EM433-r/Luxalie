@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Luxalie</title>
+  <meta name="description" content="Contactez l'équipe Luxalie. Nous sommes là pour répondre à toutes vos questions sur nos sérums cils et ongles.">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* ---- Page contact ---- */
+    .contact-hero {
+      background: var(--cream);
+      padding: clamp(60px, 8vw, 100px) var(--pad);
+      text-align: center;
+      border-bottom: 1px solid rgba(74,47,41,0.08);
+    }
+    .contact-hero__tag {
+      font-size: 11px; font-weight: 700; letter-spacing: 0.2em;
+      text-transform: uppercase; color: var(--brown); opacity: 0.75;
+      margin-bottom: 12px;
+    }
+    .contact-hero h1 {
+      font-size: clamp(28px, 4vw, 44px); font-weight: 700;
+      color: var(--text); margin-bottom: 14px; line-height: 1.2;
+    }
+    .contact-hero p {
+      font-size: 16px; color: var(--gray-text); max-width: 480px; margin: 0 auto;
+    }
+
+    .contact-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: clamp(40px, 6vw, 80px);
+      align-items: start;
+      max-width: 900px;
+      margin: clamp(60px, 8vw, 100px) auto;
+      padding: 0 var(--pad);
+    }
+    @media (max-width: 749px) {
+      .contact-layout { grid-template-columns: 1fr; gap: 48px; }
+    }
+
+    /* Info colonne */
+    .contact-info__title {
+      font-size: 20px; font-weight: 700; color: var(--text);
+      margin-bottom: 20px;
+    }
+    .contact-info__item {
+      display: flex; align-items: flex-start; gap: 14px;
+      margin-bottom: 24px;
+    }
+    .contact-info__icon {
+      width: 40px; height: 40px; border-radius: 50%;
+      background: var(--cream); border: 1px solid rgba(74,47,41,0.12);
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+    .contact-info__icon svg { width: 18px; height: 18px; color: var(--brown); }
+    .contact-info__label { font-size: 12px; font-weight: 700; text-transform: uppercase;
+      letter-spacing: 0.1em; color: var(--gray-text); margin-bottom: 4px; }
+    .contact-info__val { font-size: 15px; color: var(--text); }
+    .contact-info__val a { color: var(--brown); text-decoration: none; }
+    .contact-info__val a:hover { text-decoration: underline; }
+
+    /* Formulaire */
+    .contact-form { display: flex; flex-direction: column; gap: 16px; }
+    .contact-form__title {
+      font-size: 20px; font-weight: 700; color: var(--text); margin-bottom: 4px;
+    }
+    .form-group { display: flex; flex-direction: column; gap: 6px; }
+    .form-group label {
+      font-size: 13px; font-weight: 600; color: var(--text); letter-spacing: 0.02em;
+    }
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      width: 100%; padding: 12px 14px;
+      border: 1.5px solid rgba(74,47,41,0.2);
+      border-radius: 8px; font-family: var(--font); font-size: 14px;
+      color: var(--text); background: var(--white);
+      transition: border-color 0.2s; box-sizing: border-box;
+      resize: none;
+    }
+    .form-group input:focus,
+    .form-group textarea:focus { outline: none; border-color: var(--brown); }
+    .form-group textarea { min-height: 130px; }
+    .contact-form .btn { align-self: flex-start; margin-top: 4px; }
+    .contact-form__note {
+      font-size: 12px; color: var(--gray-text); line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+
+<!-- ANNOUNCEMENT BAR -->
+<div class="announcement-bar" aria-label="Annonces">
+  <div class="announcement-bar__track" aria-hidden="true">
+    <span class="announcement-bar__item">Livraison offerte</span>
+    <span class="announcement-bar__sep">|</span>
+    <span class="announcement-bar__item">Expédition sous 24–48h</span>
+    <span class="announcement-bar__sep">|</span>
+    <span class="announcement-bar__item">Garantie satisfait ou remboursé 30 jours</span>
+    <span class="announcement-bar__sep">|</span>
+    <span class="announcement-bar__item">Livraison offerte</span>
+    <span class="announcement-bar__sep">|</span>
+    <span class="announcement-bar__item">Expédition sous 24–48h</span>
+    <span class="announcement-bar__sep">|</span>
+    <span class="announcement-bar__item">Garantie satisfait ou remboursé 30 jours</span>
+    <span class="announcement-bar__sep">|</span>
+    <span class="announcement-bar__item">Livraison offerte</span>
+    <span class="announcement-bar__sep">|</span>
+    <span class="announcement-bar__item">Expédition sous 24–48h</span>
+    <span class="announcement-bar__sep">|</span>
+    <span class="announcement-bar__item">Garantie satisfait ou remboursé 30 jours</span>
+    <span class="announcement-bar__sep">|</span>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header class="site-header" id="site-header">
+  <div class="header__inner">
+    <div class="header__left">
+      <button class="hamburger-btn" id="hamburgerBtn" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mobileDrawer">
+        <svg class="icon-burger" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 16" aria-hidden="true">
+          <path d="M1 .5a.5.5 0 100 1h15.71a.5.5 0 000-1H1zM.5 8a.5.5 0 01.5-.5h15.71a.5.5 0 010 1H1A.5.5 0 01.5 8zm0 7a.5.5 0 01.5-.5h15.71a.5.5 0 010 1H1a.5.5 0 01-.5-.5z" fill="currentColor"/>
+        </svg>
+      </button>
+      <nav class="header__nav" aria-label="Navigation principale">
+        <a href="index.html">Accueil</a>
+        <a href="collections.html">Nos sérums</a>
+        <a href="contact.html" class="active">Contact</a>
+      </nav>
+    </div>
+    <div class="header__center">
+      <a href="index.html" class="header__logo">
+        <img src="https://luxalie.com/cdn/shop/files/Logo_fond_transparent.png?v=1769957353&width=600" alt="Luxalie" width="180" height="36">
+      </a>
+    </div>
+    <div class="header__right">
+      <button class="header__icon header__lang-toggle" aria-label="Langue">
+        Français
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <a href="https://luxalie.com/customer_authentication/redirect?locale=fr&region_country=FR" class="header__icon" aria-label="Mon compte">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 19" aria-hidden="true">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M6 4.5a3 3 0 116 0 3 3 0 01-6 0zm3-4a4 4 0 100 8 4 4 0 000-8zm5.58 12.15c1.12.82 1.83 2.24 1.91 4.85H1.51c.08-2.6.79-4.03 1.9-4.85C4.66 11.75 6.5 11.5 9 11.5s4.35.26 5.58 1.15zM9 10.5c-2.5 0-4.65.24-6.17 1.35C1.27 12.98.5 14.93.5 18v.5h17V18c0-3.07-.77-5.02-2.33-6.15-1.52-1.1-3.67-1.35-6.17-1.35z" fill="currentColor"/>
+        </svg>
+      </a>
+      <a href="https://luxalie.com/cart" class="header__icon" aria-label="Panier">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18" aria-hidden="true">
+          <path d="M.9 1.8h2.1L5.1 12h9.3l2.1-7.5H4.8" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="7" cy="15.5" r="1.1" fill="currentColor"/>
+          <circle cx="13" cy="15.5" r="1.1" fill="currentColor"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-drawer-overlay" id="drawerOverlay"></div>
+<div class="mobile-drawer" id="mobileDrawer" role="dialog" aria-modal="true" aria-label="Menu">
+  <div class="mobile-drawer__head">
+    <span class="mobile-drawer__head-title">Menu</span>
+    <button class="mobile-drawer__close-btn" id="drawerCloseBtn" aria-label="Fermer">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+        <path d="M0 14.545L1.455 16 8 9.455 14.545 16 16 14.545 9.455 8 16 1.455 14.545 0 8 6.545 1.455 0 0 1.455 6.545 8z" fill-rule="evenodd"/>
+      </svg>
+    </button>
+  </div>
+  <nav>
+    <a href="index.html"       class="drawer-nav-link">Accueil</a>
+    <a href="collections.html" class="drawer-nav-link">Nos sérums</a>
+    <a href="contact.html"     class="drawer-nav-link active">Contact</a>
+  </nav>
+  <div class="drawer-utilities">
+    <a href="https://luxalie.com/customer_authentication/redirect?locale=fr&region_country=FR" class="drawer-account-link">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 19" aria-hidden="true">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M6 4.5a3 3 0 116 0 3 3 0 01-6 0zm3-4a4 4 0 100 8 4 4 0 000-8zm5.58 12.15c1.12.82 1.83 2.24 1.91 4.85H1.51c.08-2.6.79-4.03 1.9-4.85C4.66 11.75 6.5 11.5 9 11.5s4.35.26 5.58 1.15zM9 10.5c-2.5 0-4.65.24-6.17 1.35C1.27 12.98.5 14.93.5 18v.5h17V18c0-3.07-.77-5.02-2.33-6.15-1.52-1.1-3.67-1.35-6.17-1.35z" fill="currentColor"/>
+      </svg>
+      Connexion
+    </a>
+    <div class="drawer-social">
+      <a href="https://www.facebook.com/share/17vPsAkU2X/" aria-label="Facebook" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+      </a>
+      <a href="https://www.instagram.com/luxalie_officiel?igsh=MWVpN2Fjem9ybWczZw==" aria-label="Instagram" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+      </a>
+      <a href="https://www.tiktok.com/@luxalieofficiel" aria-label="TikTok" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.32 6.32 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V9.01a8.16 8.16 0 0 0 4.77 1.52V7.09a4.85 4.85 0 0 1-1-.4z"/></svg>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- HERO CONTACT -->
+<div class="contact-hero">
+  <p class="contact-hero__tag">On est là pour toi</p>
+  <h1>Une question ?<br>Écris-nous.</h1>
+  <p>Notre équipe répond sous 24h en semaine.</p>
+</div>
+
+<!-- CONTENU -->
+<div class="contact-layout">
+
+  <!-- Infos -->
+  <div class="contact-info">
+    <p class="contact-info__title">Nous contacter</p>
+
+    <div class="contact-info__item">
+      <div class="contact-info__icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+          <polyline points="22,6 12,13 2,6"/>
+        </svg>
+      </div>
+      <div>
+        <p class="contact-info__label">Email</p>
+        <p class="contact-info__val"><a href="mailto:contact@luxalie.com">contact@luxalie.com</a></p>
+      </div>
+    </div>
+
+    <div class="contact-info__item">
+      <div class="contact-info__icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="10"/>
+          <polyline points="12 6 12 12 16 14"/>
+        </svg>
+      </div>
+      <div>
+        <p class="contact-info__label">Délai de réponse</p>
+        <p class="contact-info__val">Sous 24h en semaine</p>
+      </div>
+    </div>
+
+    <div class="contact-info__item">
+      <div class="contact-info__icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+          <circle cx="12" cy="10" r="3"/>
+        </svg>
+      </div>
+      <div>
+        <p class="contact-info__label">Basés en France</p>
+        <p class="contact-info__val">Service client 100% français</p>
+      </div>
+    </div>
+
+    <div class="contact-info__item">
+      <div class="contact-info__icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+        </svg>
+      </div>
+      <div>
+        <p class="contact-info__label">Satisfait ou remboursé</p>
+        <p class="contact-info__val">Garantie 30 jours sans conditions</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Formulaire -->
+  <form class="contact-form" action="mailto:contact@luxalie.com" method="post" enctype="text/plain" novalidate>
+    <p class="contact-form__title">Envoyer un message</p>
+
+    <div class="form-group">
+      <label for="contact-name">Prénom</label>
+      <input type="text" id="contact-name" name="prenom" placeholder="Ex : Sophie" required>
+    </div>
+
+    <div class="form-group">
+      <label for="contact-email">Email</label>
+      <input type="email" id="contact-email" name="email" placeholder="ton@email.com" required>
+    </div>
+
+    <div class="form-group">
+      <label for="contact-subject">Sujet</label>
+      <select id="contact-subject" name="sujet">
+        <option value="">Choisir un sujet</option>
+        <option value="commande">Ma commande</option>
+        <option value="produit">Question produit</option>
+        <option value="remboursement">Remboursement</option>
+        <option value="partenariat">Partenariat</option>
+        <option value="autre">Autre</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="contact-message">Message</label>
+      <textarea id="contact-message" name="message" placeholder="Comment pouvons-nous t'aider ?" required></textarea>
+    </div>
+
+    <button type="submit" class="btn btn--primary">Envoyer le message</button>
+
+    <p class="contact-form__note">En soumettant ce formulaire, tu acceptes que tes données soient utilisées pour traiter ta demande. Voir notre <a href="https://luxalie.com/pages/politique-de-confidentialite" target="_blank" style="color:var(--brown)">politique de confidentialité</a>.</p>
+  </form>
+
+</div>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer__inner">
+    <div>
+      <div class="footer__logo">
+        <img src="https://luxalie.com/cdn/shop/files/luxalie-white.png?v=1764014379" alt="Luxalie" width="120" height="34">
+      </div>
+      <p class="footer__desc">LUXALIE est une marque dédiée à la beauté du regard et des mains. Des formules expertes, une application intuitive, des résultats visibles.</p>
+      <p class="footer__email">Une question ? <a href="mailto:contact@luxalie.com">contact@luxalie.com</a></p>
+      <div class="footer__social">
+        <a href="https://www.facebook.com/share/17vPsAkU2X/" aria-label="Facebook" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" fill="white"/></svg>
+        </a>
+        <a href="https://www.instagram.com/luxalie_officiel?igsh=MWVpN2Fjem9ybWczZw==" aria-label="Instagram" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+        </a>
+        <a href="https://www.tiktok.com/@luxalieofficiel" aria-label="TikTok" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.32 6.32 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V9.01a8.16 8.16 0 0 0 4.77 1.52V7.09a4.85 4.85 0 0 1-1-.4z" fill="white"/></svg>
+        </a>
+      </div>
+    </div>
+    <div>
+      <p class="footer__col-title">Aide</p>
+      <ul class="footer__links">
+        <li><a href="contact.html">Contactez-nous</a></li>
+        <li><a href="https://luxalie.com/pages/questions-frequentes" target="_blank">Questions Fréquentes</a></li>
+        <li><a href="https://luxalie.com/pages/notre-exigence-qualite" target="_blank">Notre Exigence Qualité</a></li>
+        <li><a href="https://luxalie.com/policies/refund-policy" target="_blank">Politique de remboursement</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="footer__col-title">Légal</p>
+      <ul class="footer__links">
+        <li><a href="https://luxalie.com/pages/mentions-legales" target="_blank">Mentions Légales</a></li>
+        <li><a href="https://luxalie.com/pages/politique-de-confidentialite" target="_blank">Politique de Confidentialité</a></li>
+        <li><a href="https://luxalie.com/pages/conditions-generales-de-vente-cgv" target="_blank">CGV</a></li>
+        <li><a href="https://luxalie.com/pages/conditions-generales-dutilisation-cgu" target="_blank">CGU</a></li>
+        <li><a href="https://luxalie.com/pages/politiques-de-cookies" target="_blank">Politique de Cookies</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="footer__col-title">Nos produits</p>
+      <ul class="footer__links">
+        <li><a href="products/serum-pousse-cils-luxalie.html">Sérum Repousse Cils</a></li>
+        <li><a href="products/stylo-croissance-ongles.html">Stylo Croissance Ongles</a></li>
+        <li><a href="collections.html">Toute la collection</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <p>© 2026, Luxalie — Tous droits réservés</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

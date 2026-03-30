@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mon Panier — Luxalie</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ANNOUNCEMENT BAR -->
+<div class="announcement-bar" aria-label="Annonces">
+  <div class="announcement-bar__track" aria-hidden="true">
+    <span class="announcement-bar__item">Livraison offerte</span>
+    <span class="announcement-bar__sep">|</span>
+    <span class="announcement-bar__item">Expédition sous 24–48h</span>
+    <span class="announcement-bar__sep">|</span>
+    <span class="announcement-bar__item">Garantie satisfait ou remboursé 30 jours</span>
+    <span class="announcement-bar__sep">|</span>
+    <span class="announcement-bar__item">Livraison offerte</span>
+    <span class="announcement-bar__sep">|</span>
+    <span class="announcement-bar__item">Expédition sous 24–48h</span>
+    <span class="announcement-bar__sep">|</span>
+    <span class="announcement-bar__item">Garantie satisfait ou remboursé 30 jours</span>
+    <span class="announcement-bar__sep">|</span>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header class="site-header" id="site-header">
+  <div class="header__inner">
+    <div class="header__left">
+      <button class="hamburger-btn" id="hamburgerBtn" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mobileDrawer">
+        <svg class="icon-burger" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 16" aria-hidden="true">
+          <path d="M1 .5a.5.5 0 100 1h15.71a.5.5 0 000-1H1zM.5 8a.5.5 0 01.5-.5h15.71a.5.5 0 010 1H1A.5.5 0 01.5 8zm0 7a.5.5 0 01.5-.5h15.71a.5.5 0 010 1H1a.5.5 0 01-.5-.5z" fill="currentColor"/>
+        </svg>
+      </button>
+      <nav class="header__nav" aria-label="Navigation principale">
+        <a href="index.html">Accueil</a>
+        <a href="collections.html">Nos sérums</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+    <div class="header__center">
+      <a href="index.html" class="header__logo">
+        <img src="https://luxalie.com/cdn/shop/files/Logo_fond_transparent.png?v=1769957353&width=600" alt="Luxalie" width="180" height="36">
+      </a>
+    </div>
+    <div class="header__right">
+      <button class="header__icon header__lang-toggle" aria-label="Langue">
+        Français
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <a href="cart.html" class="header__icon cart-icon" aria-label="Panier">
+        <span class="cart-count" style="display:none"></span>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18" aria-hidden="true">
+          <path d="M.9 1.8h2.1L5.1 12h9.3l2.1-7.5H4.8" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="7" cy="15.5" r="1.1" fill="currentColor"/>
+          <circle cx="13" cy="15.5" r="1.1" fill="currentColor"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+</header>
+
+<!-- Overlay + Drawer -->
+<div class="mobile-drawer-overlay" id="drawerOverlay"></div>
+<div class="mobile-drawer" id="mobileDrawer" role="dialog" aria-modal="true" aria-label="Menu">
+  <div class="mobile-drawer__head">
+    <span class="mobile-drawer__head-title">Menu</span>
+    <button class="mobile-drawer__close-btn" id="drawerCloseBtn" aria-label="Fermer">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+        <path d="M0 14.545L1.455 16 8 9.455 14.545 16 16 14.545 9.455 8 16 1.455 14.545 0 8 6.545 1.455 0 0 1.455 6.545 8z" fill-rule="evenodd"/>
+      </svg>
+    </button>
+  </div>
+  <nav>
+    <a href="index.html" class="drawer-nav-link">Accueil</a>
+    <a href="collections.html" class="drawer-nav-link">Nos sérums</a>
+    <a href="contact.html" class="drawer-nav-link">Contact</a>
+  </nav>
+</div>
+
+<!-- BREADCRUMB -->
+<nav class="breadcrumb" aria-label="Fil d'Ariane">
+  <a href="index.html">Accueil</a>
+  <span class="breadcrumb__sep">/</span>
+  <span>Mon Panier</span>
+</nav>
+
+<!-- CART MAIN -->
+<main class="cart-page">
+  <div class="page-width">
+    <h1>Mon Panier</h1>
+    <div id="cartContent"></div>
+  </div>
+</main>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer__inner">
+    <div>
+      <div class="footer__logo">
+        <img src="https://luxalie.com/cdn/shop/files/luxalie-white.png?v=1764014379" alt="Luxalie" width="120" height="34">
+      </div>
+      <p class="footer__desc">LUXALIE est une marque dédiée à la beauté du regard et des mains. Des formules expertes, une application intuitive, des résultats visibles.</p>
+      <p class="footer__email">Une question ? <a href="mailto:contact@luxalie.com">contact@luxalie.com</a></p>
+    </div>
+    <div>
+      <p class="footer__col-title">Aide</p>
+      <ul class="footer__links">
+        <li><a href="contact.html">Contactez-nous</a></li>
+        <li><a href="https://luxalie.com/policies/refund-policy" target="_blank">Politique de remboursement</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="footer__col-title">Légal</p>
+      <ul class="footer__links">
+        <li><a href="https://luxalie.com/pages/mentions-legales" target="_blank">Mentions Légales</a></li>
+        <li><a href="https://luxalie.com/pages/politique-de-confidentialite" target="_blank">Politique de Confidentialité</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="footer__col-title">Nos produits</p>
+      <ul class="footer__links">
+        <li><a href="products/serum-pousse-cils-luxalie.html">Sérum Repousse Cils</a></li>
+        <li><a href="products/stylo-croissance-ongles.html">Stylo Croissance Ongles</a></li>
+        <li><a href="collections.html">Toute la collection</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <p>© 2026, Luxalie — Tous droits réservés</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+<script>
+(function() {
+  const CART_KEY = 'luxalie_cart';
+
+  function getCart() {
+    try { return JSON.parse(localStorage.getItem(CART_KEY)) || []; }
+    catch { return []; }
+  }
+
+  function saveCart(cart) {
+    localStorage.setItem(CART_KEY, JSON.stringify(cart));
+    renderCart();
+    updateBadge();
+  }
+
+  function updateBadge() {
+    const cart = getCart();
+    const total = cart.reduce((s, i) => s + i.qty, 0);
+    document.querySelectorAll('.cart-count').forEach(el => {
+      el.textContent = total;
+      el.style.display = total > 0 ? 'flex' : 'none';
+    });
+  }
+
+  function parsePrice(str) {
+    return parseFloat((str || '0').replace(/[^\d,]/g, '').replace(',', '.')) || 0;
+  }
+
+  function renderCart() {
+    const cart = getCart();
+    const container = document.getElementById('cartContent');
+    if (!container) return;
+
+    if (!cart.length) {
+      container.innerHTML = `
+        <div class="cart-empty">
+          <p>Votre panier est vide.</p>
+          <a href="collections.html" class="cart-checkout-btn">Découvrir nos produits</a>
+        </div>`;
+      return;
+    }
+
+    const total = cart.reduce((sum, item) => sum + parsePrice(item.price) * item.qty, 0);
+    const totalStr = total.toFixed(2).replace('.', ',') + ' €';
+
+    const itemsHtml = cart.map((item, idx) => `
+      <div class="cart-item">
+        <div class="cart-item__img">
+          <img src="${item.img || ''}" alt="${item.name}" loading="lazy">
+        </div>
+        <div>
+          <p class="cart-item__name">${item.name}</p>
+          ${item.variant ? `<p class="cart-item__variant">${item.variant}</p>` : ''}
+          <p class="cart-item__price">${item.price} × ${item.qty}</p>
+        </div>
+        <button class="cart-item__remove" data-idx="${idx}" aria-label="Supprimer">×</button>
+      </div>`).join('');
+
+    container.innerHTML = `
+      <div class="cart-items">${itemsHtml}</div>
+      <div class="cart-summary">
+        <p class="cart-total">Total : <span>${totalStr}</span></p>
+        <button class="cart-checkout-btn" id="checkoutBtn">Commander →</button>
+        <a href="collections.html" class="cart-continue">← Continuer mes achats</a>
+      </div>`;
+
+    container.querySelectorAll('.cart-item__remove').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const cart = getCart();
+        cart.splice(parseInt(btn.dataset.idx), 1);
+        saveCart(cart);
+      });
+    });
+
+    document.getElementById('checkoutBtn')?.addEventListener('click', () => {
+      alert('Merci pour votre commande ! Cette fonctionnalité sera bientôt disponible.');
+    });
+  }
+
+  renderCart();
+  updateBadge();
+})();
+</script>
+</body>
+</html>

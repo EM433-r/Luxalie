@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stylo Croissance Ongles — Luxalie</title>
+  <meta name="description" content="Stylo Croissance Ongles Luxalie : ongles plus longs et résistants en 21 jours. Formule à la biotine, kératine et huiles essentielles. Format stylo pratique.">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<!-- ANNOUNCEMENT BAR -->
+<div class="announcement-bar" aria-label="Annonces">
+  <div class="announcement-bar__track" aria-hidden="true">
+    <span class="announcement-bar__item">Livraison offerte</span>
+    <span class="announcement-bar__sep">|</span>
+    <span class="announcement-bar__item">Expédition sous 24–48h</span>
+    <span class="announcement-bar__sep">|</span>
+    <span class="announcement-bar__item">Garantie satisfait ou remboursé 30 jours</span>
+    <span class="announcement-bar__sep">|</span>
+    <span class="announcement-bar__item">Livraison offerte</span>
+    <span class="announcement-bar__sep">|</span>
+    <span class="announcement-bar__item">Expédition sous 24–48h</span>
+    <span class="announcement-bar__sep">|</span>
+    <span class="announcement-bar__item">Garantie satisfait ou remboursé 30 jours</span>
+    <span class="announcement-bar__sep">|</span>
+    <span class="announcement-bar__item">Livraison offerte</span>
+    <span class="announcement-bar__sep">|</span>
+    <span class="announcement-bar__item">Expédition sous 24–48h</span>
+    <span class="announcement-bar__sep">|</span>
+    <span class="announcement-bar__item">Garantie satisfait ou remboursé 30 jours</span>
+    <span class="announcement-bar__sep">|</span>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header class="site-header" id="site-header">
+  <div class="header__inner">
+    <div class="header__left">
+      <button class="hamburger-btn" id="hamburgerBtn" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mobileDrawer">
+        <svg class="icon-burger" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 16" aria-hidden="true">
+          <path d="M1 .5a.5.5 0 100 1h15.71a.5.5 0 000-1H1zM.5 8a.5.5 0 01.5-.5h15.71a.5.5 0 010 1H1A.5.5 0 01.5 8zm0 7a.5.5 0 01.5-.5h15.71a.5.5 0 010 1H1a.5.5 0 01-.5-.5z" fill="currentColor"/>
+        </svg>
+      </button>
+      <nav class="header__nav" aria-label="Navigation principale">
+        <a href="../index.html">Accueil</a>
+        <a href="../collections.html">Nos sérums</a>
+        <a href="../contact.html">Contact</a>
+      </nav>
+    </div>
+    <div class="header__center">
+      <a href="../index.html" class="header__logo">
+        <img src="https://luxalie.com/cdn/shop/files/Logo_fond_transparent.png?v=1769957353&width=600" alt="Luxalie" width="180" height="36">
+      </a>
+    </div>
+    <div class="header__right">
+      <button class="header__icon header__lang-toggle" aria-label="Langue">
+        Français
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <a href="https://luxalie.com/customer_authentication/redirect?locale=fr&region_country=FR" class="header__icon" aria-label="Mon compte">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 19" aria-hidden="true">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M6 4.5a3 3 0 116 0 3 3 0 01-6 0zm3-4a4 4 0 100 8 4 4 0 000-8zm5.58 12.15c1.12.82 1.83 2.24 1.91 4.85H1.51c.08-2.6.79-4.03 1.9-4.85C4.66 11.75 6.5 11.5 9 11.5s4.35.26 5.58 1.15zM9 10.5c-2.5 0-4.65.24-6.17 1.35C1.27 12.98.5 14.93.5 18v.5h17V18c0-3.07-.77-5.02-2.33-6.15-1.52-1.1-3.67-1.35-6.17-1.35z" fill="currentColor"/>
+        </svg>
+      </a>
+      <a href="../cart.html" class="header__icon cart-icon" aria-label="Panier">
+        <span class="cart-count" style="display:none"></span>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18" aria-hidden="true">
+          <path d="M.9 1.8h2.1L5.1 12h9.3l2.1-7.5H4.8" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="7" cy="15.5" r="1.1" fill="currentColor"/>
+          <circle cx="13" cy="15.5" r="1.1" fill="currentColor"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-drawer-overlay" id="drawerOverlay"></div>
+<div class="mobile-drawer" id="mobileDrawer" role="dialog" aria-modal="true" aria-label="Menu">
+  <div class="mobile-drawer__head">
+    <span class="mobile-drawer__head-title">Menu</span>
+    <button class="mobile-drawer__close-btn" id="drawerCloseBtn" aria-label="Fermer">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+        <path d="M0 14.545L1.455 16 8 9.455 14.545 16 16 14.545 9.455 8 16 1.455 14.545 0 8 6.545 1.455 0 0 1.455 6.545 8z" fill-rule="evenodd"/>
+      </svg>
+    </button>
+  </div>
+  <nav>
+    <a href="../index.html"       class="drawer-nav-link">Accueil</a>
+    <a href="../collections.html" class="drawer-nav-link active">Nos sérums</a>
+    <a href="../contact.html"     class="drawer-nav-link">Contact</a>
+  </nav>
+  <div class="drawer-utilities">
+    <a href="https://luxalie.com/customer_authentication/redirect?locale=fr&region_country=FR" class="drawer-account-link">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 19" aria-hidden="true">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M6 4.5a3 3 0 116 0 3 3 0 01-6 0zm3-4a4 4 0 100 8 4 4 0 000-8zm5.58 12.15c1.12.82 1.83 2.24 1.91 4.85H1.51c.08-2.6.79-4.03 1.9-4.85C4.66 11.75 6.5 11.5 9 11.5s4.35.26 5.58 1.15zM9 10.5c-2.5 0-4.65.24-6.17 1.35C1.27 12.98.5 14.93.5 18v.5h17V18c0-3.07-.77-5.02-2.33-6.15-1.52-1.1-3.67-1.35-6.17-1.35z" fill="currentColor"/>
+      </svg>
+      Connexion
+    </a>
+    <div class="drawer-social">
+      <a href="https://www.facebook.com/share/17vPsAkU2X/" aria-label="Facebook" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+      </a>
+      <a href="https://www.instagram.com/luxalie_officiel?igsh=MWVpN2Fjem9ybWczZw==" aria-label="Instagram" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+      </a>
+      <a href="https://www.tiktok.com/@luxalieofficiel" aria-label="TikTok" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.32 6.32 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V9.01a8.16 8.16 0 0 0 4.77 1.52V7.09a4.85 4.85 0 0 1-1-.4z"/></svg>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- BREADCRUMB -->
+<nav class="breadcrumb" aria-label="Fil d'Ariane">
+  <a href="../index.html">Accueil</a>
+  <span class="breadcrumb__sep">/</span>
+  <a href="../collections.html">Nos sérums</a>
+  <span class="breadcrumb__sep">/</span>
+  <span>Stylo Croissance Ongles</span>
+</nav>
+
+<!-- PRODUCT MAIN -->
+<section class="product-hero product-hero--white">
+  <div class="product-layout">
+
+    <!-- Gallery -->
+    <div class="fp-gallery">
+      <div class="fp-gallery__thumbs" id="styloThumbs">
+        <div class="fp-gallery__thumb active" data-src="https://luxalie.com/cdn/shop/files/generated-image-12-3.jpg?v=1766143802">
+          <img src="https://luxalie.com/cdn/shop/files/generated-image-12-3.jpg?v=1766143802&width=150" alt="Stylo individuel">
+        </div>
+        <div class="fp-gallery__thumb" data-src="https://luxalie.com/cdn/shop/files/Avant_apres.jpg?v=1768402256">
+          <img src="https://luxalie.com/cdn/shop/files/Avant_apres.jpg?v=1768402256&width=150" alt="Avant-après ongles">
+        </div>
+        <div class="fp-gallery__thumb" data-src="https://luxalie.com/cdn/shop/files/Image_application_stylo_c538b51c-ec2f-48b3-8700-a1bcb0ac5d85.png?v=1768399793">
+          <img src="https://luxalie.com/cdn/shop/files/Image_application_stylo_c538b51c-ec2f-48b3-8700-a1bcb0ac5d85.png?v=1768399793&width=150" alt="Application">
+        </div>
+        <div class="fp-gallery__thumb" data-src="https://luxalie.com/cdn/shop/files/5_8e1cc415-6e0e-493d-ac54-49b94b3f9a0d.jpg?v=1768399793">
+          <img src="https://luxalie.com/cdn/shop/files/5_8e1cc415-6e0e-493d-ac54-49b94b3f9a0d.jpg?v=1768399793&width=150" alt="Pack duo">
+        </div>
+        <div class="fp-gallery__thumb" data-src="https://luxalie.com/cdn/shop/files/6_d107d7bd-cc31-459b-ae64-524e9da507eb.jpg?v=1768399793">
+          <img src="https://luxalie.com/cdn/shop/files/6_d107d7bd-cc31-459b-ae64-524e9da507eb.jpg?v=1768399793&width=150" alt="Pack cure">
+        </div>
+        <div class="fp-gallery__thumb" data-src="https://luxalie.com/cdn/shop/files/8_2f106a95-4aeb-43b7-b30d-0884da932458.png?v=1768399793">
+          <img src="https://luxalie.com/cdn/shop/files/8_2f106a95-4aeb-43b7-b30d-0884da932458.png?v=1768399793&width=150" alt="Packaging">
+        </div>
+        <div class="fp-gallery__thumb" data-src="https://luxalie.com/cdn/shop/files/ChatGPT_Image_10_sept._2025_a_16_31_13_87fc2a9d-0ff0-47de-ad5c-d548aa43d3fe.png?v=1768399793">
+          <img src="https://luxalie.com/cdn/shop/files/ChatGPT_Image_10_sept._2025_a_16_31_13_87fc2a9d-0ff0-47de-ad5c-d548aa43d3fe.png?v=1768399793&width=150" alt="Application close-up">
+        </div>
+      </div>
+      <div class="fp-gallery__main">
+        <img id="styloMainImg" src="https://luxalie.com/cdn/shop/files/generated-image-12-3.jpg?v=1766143802" alt="Stylo Croissance Ongles Luxalie" loading="eager" fetchpriority="high">
+      </div>
+    </div>
+
+    <!-- Info -->
+    <div class="fp-info">
+      <p class="fp-info__vendor">LUXALIE</p>
+      <h1 class="fp-info__title">Stylo Croissance Ongles — Luxalie</h1>
+      <p class="fp-info__subtitle">Redécouvre la force de tes ongles.</p>
+      <div class="fp-info__rating">
+        <span class="fp-info__stars">★★★★★</span>
+        <span class="fp-info__count">4,88 (16 avis)</span>
+      </div>
+      <ul class="fp-info__bullets">
+        <li>
+          <svg class="fp-bullet-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+          Répare et renforce profondément dès <strong>14 jours</strong>. Résultat optimal après 21 jours.
+        </li>
+        <li>
+          <svg class="fp-bullet-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+          Prévient la casse et les dédoublements — force, souplesse et brillance.
+        </li>
+        <li>
+          <svg class="fp-bullet-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+          Stimule la croissance naturelle des ongles grâce à des ingrédients naturels.
+        </li>
+        <li>
+          <svg class="fp-bullet-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+          Format pratique stylo — idéal pour une utilisation quotidienne partout.
+        </li>
+      </ul>
+
+      <blockquote class="fp-info__quote">
+        "Je n'y croyais pas trop au début, mais mes ongles ont vraiment poussé plus vite. Ils se dédoublent beaucoup moins, et je peux enfin les garder longs."
+        <cite>— Laurine B. · Achat vérifié</cite>
+      </blockquote>
+
+      <p class="fp-info__variant-label">Offres du moment</p>
+      <p class="fp-info__variant-sub">Quantités limitées, profitez-en vite</p>
+
+      <div class="variant-cards" id="styloVariants">
+        <div class="variant-card active" data-price="19,99 €">
+          <span class="variant-card__qty">x1</span>
+          <div class="variant-card__info">
+            <div class="variant-card__name">Format individuel</div>
+            <div class="variant-card__sub">1 stylo</div>
+          </div>
+          <div class="variant-card__pricing">
+            <span class="variant-card__current">19,99 €</span>
+            <span class="variant-card__old">29,99 €</span>
+          </div>
+        </div>
+        <div class="variant-card" data-price="29,99 €">
+          <span class="variant-card__badge">L'offre préférée</span>
+          <span class="variant-card__qty">x2</span>
+          <div class="variant-card__info">
+            <div class="variant-card__name">Duo Performance</div>
+            <div class="variant-card__sub">1 + le 2ème à -50%</div>
+          </div>
+          <div class="variant-card__pricing">
+            <span class="variant-card__current">29,99 €</span>
+            <span class="variant-card__old">49,98 €</span>
+          </div>
+        </div>
+        <div class="variant-card" data-price="39,99 €">
+          <span class="variant-card__qty">x3</span>
+          <div class="variant-card__info">
+            <div class="variant-card__name">Cure Intense</div>
+            <div class="variant-card__sub">2 achetés + 1 offert</div>
+          </div>
+          <div class="variant-card__pricing">
+            <span class="variant-card__current">39,99 €</span>
+            <span class="variant-card__old">74,97 €</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="fp-info__cta">
+        <button class="btn-add-to-cart">Commander maintenant</button>
+        <button class="btn-more-payment">Plus de moyens de paiement</button>
+      </div>
+
+      <!-- UPSELL inline -->
+      <div class="fp-upsell">
+        <p class="fp-upsell__label">Fréquemment acheté avec</p>
+        <div class="fp-upsell__card">
+          <div class="fp-upsell__img">
+            <img src="https://luxalie.com/cdn/shop/files/generated-image-8-2.jpg?v=1769957538" alt="Sérum Repousse Cils" loading="lazy">
+          </div>
+          <div class="fp-upsell__info">
+            <p class="fp-upsell__name">Sérum Repousse Cils</p>
+            <p class="fp-upsell__price">24,99 €</p>
+          </div>
+          <button class="fp-upsell__btn">Ajouter</button>
+        </div>
+      </div>
+
+      <div class="fp-info__mini-trust">
+        <span class="fp-mini-trust__item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          Livraison offerte
+        </span>
+        <span class="fp-mini-trust__item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          Garantie 30 jours
+        </span>
+        <span class="fp-mini-trust__item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          Expédition 24 à 48h
+        </span>
+      </div>
+
+      <!-- Accordion -->
+      <div class="product-accordion">
+        <details class="accordion-item">
+          <summary class="accordion-summary">Spécifications</summary>
+          <div class="accordion-content">
+            <p>Format stylo rotatif. Ingrédients actifs : Biotine, Kératine, Huiles essentielles, Complexe fortifiant. Sans alcool, sans parabènes. Convient aux peaux sensibles. Application directe sur l'ongle et les cuticules.</p>
+          </div>
+        </details>
+        <details class="accordion-item">
+          <summary class="accordion-summary">Commande &amp; Retours</summary>
+          <div class="accordion-content">
+            <p>Livraison offerte, expédition sous 24 à 48 heures. Garantie satisfait ou remboursé 30 jours. Pour tout retour, contactez <a href="mailto:contact@luxalie.com">contact@luxalie.com</a>.</p>
+          </div>
+        </details>
+        <details class="accordion-item">
+          <summary class="accordion-summary">Conseils d'utilisation</summary>
+          <div class="accordion-content">
+            <p>1. Secouez légèrement le stylo avant utilisation.<br>
+            2. Tournez l'embout jusqu'à libérer une petite quantité de sérum.<br>
+            3. Appliquez sur chaque ongle propre et sec, en ciblant la base et la cuticule.<br>
+            4. Laissez sécher. Utilisez matin et soir pour des résultats optimaux.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TICKER -->
+<div class="ticker-dark" aria-hidden="true">
+  <div class="ticker-dark__track">
+    <span class="ticker-dark__item">Stimule la pousse naturelle</span>
+    <span class="ticker-dark__dot">•</span>
+    <span class="ticker-dark__item">Fortifie dès la racine</span>
+    <span class="ticker-dark__dot">•</span>
+    <span class="ticker-dark__item">Résultats visibles en 21 jours</span>
+    <span class="ticker-dark__dot">•</span>
+    <span class="ticker-dark__item">Stimule la pousse naturelle</span>
+    <span class="ticker-dark__dot">•</span>
+    <span class="ticker-dark__item">Fortifie dès la racine</span>
+    <span class="ticker-dark__dot">•</span>
+    <span class="ticker-dark__item">Résultats visibles en 21 jours</span>
+    <span class="ticker-dark__dot">•</span>
+    <span class="ticker-dark__item">Stimule la pousse naturelle</span>
+    <span class="ticker-dark__dot">•</span>
+    <span class="ticker-dark__item">Fortifie dès la racine</span>
+    <span class="ticker-dark__dot">•</span>
+  </div>
+</div>
+
+<!-- AVANT & APRÈS -->
+<section class="before-after-section before-after-section--cream scroll-reveal">
+  <div class="page-width">
+    <h2>Avant &amp; Après</h2>
+    <p class="sub">Des ongles plus longs et plus résistants</p>
+    <div class="before-after-cols">
+      <div class="ba-col">
+        <img src="https://luxalie.com/cdn/shop/files/Avant_apres.jpg?v=1768402256" alt="Ongles avant utilisation Luxalie" loading="lazy">
+        <span class="ba-label">Jour 1</span>
+      </div>
+      <div class="ba-col">
+        <img src="https://luxalie.com/cdn/shop/files/Avant_apres.jpg?v=1768402256" alt="Ongles après 21 jours Luxalie" loading="lazy">
+        <span class="ba-label">Jour 21</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FORMULE EXPERTE (richtext) -->
+<section class="richtext-section richtext-section--white scroll-reveal">
+  <div class="page-width">
+    <h2>Une formule experte pour révéler la beauté naturelle de tes mains.</h2>
+    <p>Révèle la vraie force de tes ongles, dès la racine.</p>
+    <p>Le Stylo Croissance Ongles Luxalie stimule visiblement la pousse et renforce la structure de l'ongle dès la base. Sa formule à la biotine, kératine et huiles essentielles nourrit, protège et embellit durablement — sans alcool, sans parabènes, sans compromis.</p>
+  </div>
+</section>
+
+<!-- MODE D'EMPLOI -->
+<section class="usage-section usage-section--cream scroll-reveal">
+  <div class="usage-inner">
+    <h2>Mode d'emploi</h2>
+    <p class="sub">2 minutes le soir — et tes ongles commencent leur transformation.</p>
+    <div class="usage-steps">
+      <div class="usage-step">
+        <span class="usage-step__num">1</span>
+        <p class="usage-step__text"><strong>Secouez</strong> légèrement le stylo avant utilisation pour activer la formule.</p>
+      </div>
+      <div class="usage-step">
+        <span class="usage-step__num">2</span>
+        <p class="usage-step__text"><strong>Tournez l'embout</strong> jusqu'à libérer une petite quantité de sérum sur l'applicateur.</p>
+      </div>
+      <div class="usage-step">
+        <span class="usage-step__num">3</span>
+        <p class="usage-step__text"><strong>Appliquez</strong> sur chaque ongle propre et sec, en ciblant la base et la cuticule.</p>
+      </div>
+      <div class="usage-step">
+        <span class="usage-step__num">4</span>
+        <p class="usage-step__text"><strong>Laissez sécher</strong> et renouvelez l'opération matin et soir pour des résultats optimaux.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMPARATIF -->
+<section class="comparison-section comparison-section--brown scroll-reveal">
+  <div class="page-width">
+    <h2>Pourquoi choisir le Stylo Croissance Ongles Luxalie ?</h2>
+    <p class="sub">Un soin unique qui allie précision, efficacité et élégance au quotidien</p>
+    <div class="comparison-table-wrap">
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th></th>
+            <th class="col-luxalie">Luxalie</th>
+            <th>Les autres</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Application ciblée &amp; précise</td>
+            <td class="check">✓</td>
+            <td class="cross">✗</td>
+          </tr>
+          <tr>
+            <td>Triple action en profondeur</td>
+            <td class="check">✓</td>
+            <td class="cross">✗</td>
+          </tr>
+          <tr>
+            <td>Élégance &amp; praticité du format</td>
+            <td class="check">✓</td>
+            <td class="cross">✗</td>
+          </tr>
+          <tr>
+            <td>Sans parabènes ni alcool</td>
+            <td class="check">✓</td>
+            <td class="cross">✗</td>
+          </tr>
+          <tr>
+            <td>Résultats visibles dès 14 jours</td>
+            <td class="check">✓</td>
+            <td class="cross">✗</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- UN RITUEL BEAUTÉ -->
+<section class="split scroll-reveal">
+  <div class="split__media">
+    <img src="https://luxalie.com/cdn/shop/files/ChatGPT_Image_10_sept._2025_a_16_31_13_87fc2a9d-0ff0-47de-ad5c-d548aa43d3fe.png?v=1768399793" alt="Application du stylo Luxalie" loading="lazy">
+  </div>
+  <div class="split__content split__content--brown">
+    <h2 class="split__title">Un rituel de beauté, signé Luxalie</h2>
+    <p class="split__body">Tu en as assez des faux ongles qui cassent, du gel qui abîme et des poses qui coûtent cher chaque mois.<br><br>Luxalie, c'est autre chose : un soin qui respecte tes ongles naturels, les renforce depuis la base et les embellit durablement. Une application, deux minutes — et tes mains retrouvent leur beauté d'avant.</p>
+    <a href="../collections.html" class="btn btn--secondary">Voir tous les produits</a>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq-section scroll-reveal">
+  <div class="page-width">
+    <h2>F.A.Q</h2>
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary>À qui s'adresse le Stylo Croissance Ongles Luxalie ?</summary>
+        <p class="faq-answer">Ce soin est fait pour toi si tes ongles cassent facilement, se dédoublent, ou si tu en as assez des poses gel et faux ongles qui coûtent cher et fragilisent. En 14 jours d'utilisation régulière, tu observes les premiers changements.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Combien de temps faut-il pour voir les résultats ?</summary>
+        <p class="faq-answer">Les premiers résultats sont visibles dès 14 jours d'utilisation régulière. Pour des résultats optimaux, une cure complète de 21 jours est recommandée. Les ongles deviennent progressivement plus longs, plus forts et plus brillants.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Peut-on appliquer le stylo avec du vernis ?</summary>
+        <p class="faq-answer">Oui, le stylo peut être utilisé sur ongles nus. Si tu portes du vernis, applique-le sur les cuticules et la base de l'ongle. Pour maximiser la pénétration de la formule, privilégie une application sans vernis.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Le produit est-il sûr pour les peaux sensibles ?</summary>
+        <p class="faq-answer">Oui, la formule Luxalie est sans alcool, sans parabènes et sans produits agressifs. Elle est conçue pour convenir aux peaux sensibles. En cas d'irritation, cessez l'utilisation et consultez un dermatologue.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="product-reviews-section scroll-reveal">
+  <div class="page-width">
+    <h2>Avis Clients</h2>
+    <p class="prs-summary"><span>4,88 ★</span> sur 5 — Basé sur 16 avis</p>
+    <div class="prs-grid">
+      <div class="prs-card">
+        <p class="prs-card__verified">✓ Achat vérifié</p>
+        <div class="prs-card__stars">★★★★★</div>
+        <p class="prs-card__text">"Je n'y croyais pas trop au début, mais mes ongles ont vraiment poussé plus vite. Ils se dédoublent beaucoup moins, et je peux enfin les garder longs."</p>
+        <p class="prs-card__author">Laurine B.</p>
+        <p class="prs-card__product">Stylo Croissance Ongles</p>
+      </div>
+      <div class="prs-card">
+        <p class="prs-card__verified">✓ Achat vérifié</p>
+        <div class="prs-card__stars">★★★★★</div>
+        <p class="prs-card__text">"J'aime beaucoup ce produit, mes ongles sont vraiment plus forts et poussent mieux. Je recommande !"</p>
+        <p class="prs-card__author">Anonyme</p>
+        <p class="prs-card__product">Stylo Croissance Ongles</p>
+      </div>
+      <div class="prs-card">
+        <p class="prs-card__verified">✓ Achat vérifié</p>
+        <div class="prs-card__stars">★★★★★</div>
+        <p class="prs-card__text">"Pratique à emporter partout. J'utilise le stylo dans mon sac à main. En 3 semaines, mes ongles sont visiblement plus résistants."</p>
+        <p class="prs-card__author">Sophie M.</p>
+        <p class="prs-card__product">Stylo Croissance Ongles</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer__inner">
+    <div>
+      <div class="footer__logo">
+        <img src="https://luxalie.com/cdn/shop/files/luxalie-white.png?v=1764014379" alt="Luxalie" width="120" height="34">
+      </div>
+      <p class="footer__desc">LUXALIE est une marque dédiée à la beauté du regard et des mains. Des formules expertes, une application intuitive, des résultats visibles.</p>
+      <p class="footer__email">Une question ? <a href="mailto:contact@luxalie.com">contact@luxalie.com</a></p>
+      <div class="footer__social">
+        <a href="https://www.facebook.com/share/17vPsAkU2X/" aria-label="Facebook" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" fill="white"/></svg>
+        </a>
+        <a href="https://www.instagram.com/luxalie_officiel?igsh=MWVpN2Fjem9ybWczZw==" aria-label="Instagram" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+        </a>
+        <a href="https://www.tiktok.com/@luxalieofficiel" aria-label="TikTok" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.32 6.32 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V9.01a8.16 8.16 0 0 0 4.77 1.52V7.09a4.85 4.85 0 0 1-1-.4z" fill="white"/></svg>
+        </a>
+      </div>
+    </div>
+    <div>
+      <p class="footer__col-title">Aide</p>
+      <ul class="footer__links">
+        <li><a href="../contact.html">Contactez-nous</a></li>
+        <li><a href="https://luxalie.com/pages/questions-frequentes" target="_blank">Questions Fréquentes</a></li>
+        <li><a href="https://luxalie.com/pages/notre-exigence-qualite" target="_blank">Notre Exigence Qualité</a></li>
+        <li><a href="https://luxalie.com/policies/refund-policy" target="_blank">Politique de remboursement</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="footer__col-title">Légal</p>
+      <ul class="footer__links">
+        <li><a href="https://luxalie.com/pages/mentions-legales" target="_blank">Mentions Légales</a></li>
+        <li><a href="https://luxalie.com/pages/politique-de-confidentialite" target="_blank">Politique de Confidentialité</a></li>
+        <li><a href="https://luxalie.com/pages/conditions-generales-de-vente-cgv" target="_blank">CGV</a></li>
+        <li><a href="https://luxalie.com/pages/conditions-generales-dutilisation-cgu" target="_blank">CGU</a></li>
+        <li><a href="https://luxalie.com/pages/politiques-de-cookies" target="_blank">Politique de Cookies</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="footer__col-title">Nos produits</p>
+      <ul class="footer__links">
+        <li><a href="serum-pousse-cils-luxalie.html">Sérum Repousse Cils</a></li>
+        <li><a href="stylo-croissance-ongles.html">Stylo Croissance Ongles</a></li>
+        <li><a href="../collections.html">Toute la collection</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <p>© 2026, Luxalie — Tous droits réservés</p>
+  </div>
+</footer>
+
+<script src="../script.js"></script>
+</body>
+</html>
